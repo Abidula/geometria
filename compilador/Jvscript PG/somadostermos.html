@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-énessimo Termo</title>
+
+<title>Soma dos Termos</title>
+
+</head>
+
+
+
+</body>
+
+
+
+<script language="javascript">
+
+	var a1f, razf, poster, snf;
+
+	var a1i, razi, sni;
+
+	var operacao;
+
+
+
+	operacao = window.prompt("Selecione a operação a ser realizada: \n Digite o valor da operação \n 1 = A Soma dos Termos de uma PG Finita \n 2 = A Soma dos Termos PG Infinita", "")
+
+
+
+	if ( operacao == 1 ) {
+
+		a1f = parseFloat(window.prompt("Primeiro Termo da Sequência: "));
+
+		razf = parseFloat(window.prompt("Informe a Razão: "));
+
+		poster = parseFloat(window.prompt("Informe a Posição do Termo na Sequência: "));
+
+		snf =  ((a1f*(Math.pow(razf,poster)-1))/(razf-1));
+
+	    alert("A Soma dos Termos da PG Finita é:  " + snf);
+
+	} else if ( operacao == 2 ) {
+
+		a1i = parseFloat(window.prompt("Primeiro Termo da Sequência: "));
+
+		razi = parseFloat(window.prompt("Informe a Razão: (obs: COLOQUE O NÚMERO EM DECIMAL)"));
+
+		sni = (a1i/(1-razi));
+
+		alert("A Soma dos Termos da PG Infinita é:  " + sni);	
+
+	} else {
+
+		alert("Operaçâo Inválida !");
+
+	}
+
+</script>
+
+
+
+</body>
+
+
+
+</html>
+

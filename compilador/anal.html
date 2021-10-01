@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular na Geometria Analítica</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../ico/favicon-16x16.png">
+    <link rel="manifest" href="../ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+ <style>
+* {
+  margin: 0;
+  padding: 0;
+ }
+ .link {
+  width: 100%;
+  height: 5px;
+  font-family: cursive;
+ }
+ .link ul {
+  list-style: none;
+  position: absolute;
+ }
+ .link a {
+  background-color: #107E71;
+  border-radius: 10px;
+  padding: 3px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+ }
+ .btns{
+ 	text-align: center;
+ 	margin-top: 200px;
+ }
+ .efeito{
+ 	border: none;
+ 	color: #ffffff;
+ 	padding: 28px;
+ 	margin: 18px;
+ 	font-size: 24px;
+ 	line-height: 24px;
+ 	border-radius: 10px;
+ 	position: relative;
+ 	box-sizing: border-box;
+ 	cursor: pointer;
+ 	transition: all 400ms ease;
+ }
+ .efeito-1{
+ 	background: #32a041;
+ 	transform-style: preserve-3d;
+ }
+ .efeito-1:after {
+ 	top: -100%;
+ 	left: 0px;
+ 	width: 100%;
+ 	padding: 20px;
+ 	position: absolute;
+ 	background: #222;
+ 	border-radius: 10px;
+ 	box-sizing: border-box;
+ 	content: 'Clique!';
+ 	transform-origin: left bottom;
+ 	transform: rotateX(90deg);
+ }
+ .efeito-1:hover{
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) transLateY(100%); 
+ }
+ .efeito-2{
+ 	background: #32a041;
+ 	transform-style: preserve-3d;
+ }
+ .efeito-2:after {
+ 	top: -100%;
+ 	left: 0px;
+ 	width: 100%;
+ 	padding: 20px;
+ 	position: absolute;
+ 	background: #222;
+ 	border-radius: 10px;
+ 	box-sizing: border-box;
+ 	content: 'Clique!';
+ 	transform-origin: left bottom;
+ 	transform: rotateX(90deg);
+ }
+ .efeito-2:hover{
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) transLateY(100%); 
+ }
+ .efeito-3{
+ 	background: #32a041;
+ 	transform-style: preserve-3d;
+ }
+ .efeito-3:after {
+ 	top: -100%;
+ 	left: 0px;
+ 	width: 100%;
+ 	padding: 20px;
+ 	position: absolute;
+ 	background: #222;
+ 	border-radius: 10px;
+ 	box-sizing: border-box;
+ 	content: 'Clique!';
+ 	transform-origin: left bottom;
+ 	transform: rotateX(90deg);
+ }
+ .efeito-3:hover{
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) transLateY(100%); 
+ }
+ .menu {
+  width: 100%;
+  height: 60px;
+  background: #222;
+  font-family: fantasy;
+ }
+ .menu ul {
+  list-style: none;
+  position: relative;
+ }
+ .menu ul li {
+  width: 230px;
+  float: left;
+ }
+ .menu a {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+ }
+ .menu a:hover {
+  background-color: #32a041;
+  color: #555;
+ }
+ .menu ul ul {
+  position: absolute;
+  visibility: hidden;
+ }
+ .menu ul li:hover ul {
+  visibility: visible;
+  z-index: 4;
+ }
+ .menu ul ul li {
+  float: none;
+  /*border-bottom: solid 1px #ccc;*/
+  margin: 2px;
+ }
+ .menu ul ul li a {
+  background-color: #069; 
+ }
+ label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #222;
+  color: #fff;
+  font-family: "fantasy";
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: none;
+ }
+ #bt_menu {
+   display: none;
+ }
+   @media (max-width: 800px) {
+     label[for="bt_menu"] {
+     display: block;
+  }
+  #bt_menu:checked ~ .menu {
+   margin-left: 0;
+  }
+  .menu {
+      margin-top: 5px;
+      margin-left: -100%;
+      transition: all .4s;
+      text-decoration:none;
+  }
+  .menu ul li {
+      width: 100%;
+      float: none;
+  }
+  .menu ul ul {
+      position: static;
+      overflow: hidden;
+      max-height: 0;
+      transition: all .8s;
+  }
+  .menu ul li:hover ul {
+      height: auto;
+      max-height: 200px;
+  }
+ }
+ </style>
+</head>
+<body background="../img/fundo2.jpg">
+ <input type="checkbox" id="bt_menu">
+ <label for="bt_menu"> &#9776; </label>
+ <nav class="menu">
+       <ul>
+          <li><a href="../index.html">Início</a></li>
+        <li><a href="#">Geometrias e Progressões</a>
+        <ul>
+         <li><a href="../Texto/geometria_analitica.html">Analítica</a></li>
+         <li><a href="../Texto/geometria_plana.html">Plana</a></li>
+         <li><a href="../Texto/gs.html">Espacial</a></li>
+         <li><a href="../Texto/Prog.html">PA e PG</a></li>
+        </ul>
+        </li>
+         <li><a href="#">Calculadora</a>
+        <ul>
+          <li><a href="plana.html">Geometria Plana</a></li>
+          <li><a href="anal.html">Geometria Analítica</a></li>
+          <li><a href="PA.html">PA e PG</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Vídeo Aulas</a>
+         <ul>
+            <li><a href="https://www.youtube.com/watch?v=XAK7m6SRLPw&list=PLEfwqyY2ox86GfOHvSgN5iJZKNN_AUlU_" target="blank">Geometria Plana</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ZJ5Aqwcx9f4&list=PLEfwqyY2ox858XssXB_f-Jx42fgTb0Vsn" target="blank">Geometria Analítica</a></li>
+            <li><a href="https://www.youtube.com/watch?v=v_PQnBk-8Mc&list=PLEfwqyY2ox87GYPpLcP1kv2Nt9xu0oBTy" target="blank">Geometria Espacial</a></li>
+            <li><a href="https://www.youtube.com/watch?v=QE3GieQD-Ps&list=PLEfwqyY2ox85NtaWwua8KHQYEx5I7qe3E" target="blank">PA e PG</a></li>
+          </ul>
+        <li><a href="#">Contatos/Outros</a>
+          <ul>
+          <li><a href="https://www.facebook.com/geometria.aolado.1" target="blank">Facebook</a></li>
+          <li><a href="https://instagram.com/geometria_suporte?igshid=1gl7gsmw98cfa" target="blank">Instagram</a></li>
+          <li><a href="../desenvolvedores/desenvolver.html" target="blank">Desenvolvedores</a></li>
+          <li><a href="../outros/relogio.html" target="blank">Relógio</a></li>
+          <li><a href="../outros/corona.html" target="blank">Covid-19</a></li>
+        </li>
+        </ul>
+        </nav>
+        <br><br>
+        <nav class="link">
+       <ul>
+         <center><h1><li><a href="#">Calculadora: Geometria Analítica</a></li></h1></center>
+       </ul>
+     </nav>
+        <div class="btns">
+        	<a href="../compilador/Jvscrip anal/baricentro.html" target="blank"><button type="button" class="efeito efeito-1">Baricentro</button>
+        	<a href="../compilador/Jvscrip anal/distpontos.html" target="blank"><button type="button" class="efeito efeito-2">Distância entre Pontos</button>
+        	<a href="../compilador/Jvscrip anal/pontomedio.html" target="blank"><button type="button" class="efeito efeito-3">Média de Pontos</button>,
+        </div>
+</body>
+</html>

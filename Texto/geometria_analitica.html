@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometria Analítica</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../ico/favicon-16x16.png">
+    <link rel="manifest" href="../ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+ }
+ .link {
+  width: 100%;
+  height: 5px;
+  font-family: cursive;
+ }
+ .link ul {
+  list-style: none;
+  position: relative;
+ }
+ .link a {
+  background-color: #107E71;
+  border-radius: 10px;
+  padding: 3px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+ }
+.nav_tabs{
+    width: 1000px;
+    height: 1000px;
+    margin: 75px auto;
+    background-color: #fff;
+    position: relative;
+    border-radius: 30px;
+  }
+  .nav_tabs ul{
+    list-style: none;
+  }
+  .nav_tabs ul li{
+    float: left;
+  }
+  .tab_label{
+    display: block;
+    width: 200px;
+    background-color: #222;
+    padding: 25px;
+    font-size: 15px;
+    color:#fff;
+    cursor: pointer;
+    text-align: center;
+    font-family: fantasy;
+  }
+  .nav_tabs .rd_tab { 
+  display:none;
+  position: relative;
+}
+.nav_tabs .rd_tab:checked ~ label { 
+  color:#fff;}
+.tab-content{
+  border-top: solid 5px #32a041;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  height: auto;
+  width: 1000px;
+  left: 0; 
+  border-radius:0;
+}
+.rd_tab:checked ~ .tab-content{
+  display: block;
+}
+.tab-content h2{
+  padding: 10px;
+  color: #0E1810;
+  font-family: Cursive;
+}
+.tab-content article{
+  padding: 30px;
+  color: #0E1810;
+  font-family: Cursive;
+}
+ .menu {
+  width: 100%;
+  height: 60px;
+  background: #222;
+  font-family: fantasy;
+ }
+ .menu ul {
+  list-style: none;
+  position: relative;
+ }
+ .menu ul li {
+  width: 230px;
+  float: left;
+ }
+ .menu a {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+ }
+ .menu a:hover {
+  background-color: #32a041;
+  color: #555;
+ }
+ .menu ul ul {
+  position: absolute;
+  visibility: hidden;
+ }
+ .menu ul li:hover ul {
+  visibility: visible;
+  z-index: 4;
+ }
+ .menu ul ul li {
+  float: none;
+  /*border-bottom: solid 1px #ccc;*/
+  margin: 2px;
+ }
+ .menu ul ul li a {
+  background-color: #069; 
+ }
+ label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #222;
+  color: #fff;
+  font-family: "fantasy";
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: none;
+ }
+ label[for="tab1"]{
+  border-top-left-radius: 20px;
+ }
+  label[for="tab4"]{
+  border-top-right-radius: 20px;
+ }
+ #bt_menu {
+      display: none;
+ }
+    @media (max-width: 800px) {
+     label[for="bt_menu"] {
+     display: block;
+  }
+  #bt_menu:checked ~ .menu {
+      margin-left: 0;
+  }
+  .menu {
+      margin-top: 5px;
+      margin-left: -100%;
+      transition: all .4s;
+      text-decoration:none;
+  }
+  ul li .menu {
+      width: 100%;
+      float: none;
+  }
+  ul ul .menu {
+      position: static;
+      overflow: hidden;
+      max-height: 0;
+      transition: all .8s;
+  }
+  .menu ul li:hover ul {
+      height: auto;
+      max-height: 200px;
+  }
+}
+.zoom{
+  overflow: hidden;
+}
+.zoom img{
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.zoom:hover img{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*#scroolPath{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}*/
+#progressbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  background: #120a8f;
+  /*animation: animate 5s linear infinite;*/
+}
+/*@keyframes animate{
+  0%, 100%{
+    filter: hue-rotate(0deg);
+  }
+  50%{
+    filter: hue-rotate(360deg);
+  }
+}
+#progressbar:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(10px);
+}
+#progressbar:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(10px);
+}*/
+.scrollTop{
+  position: fixed;
+  bottom: 800px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #32a041 url(up.png);
+  border-radius: 50%;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.scrollTop.active{
+  bottom: 40px;
+  visibility: visible;
+  opacity: 1;
+}
+ul.listagem{
+  list-style-type: disc;
+}
+p.justify{
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+p.center{
+  text-align: center;
+}
+img.center_img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+ </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compartible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body background="../img/fundo2.jpg">
+<div class="scrollTop" onclick="scrollToTop()"></div>
+ <input type="checkbox" id="bt_menu">
+ <label for="bt_menu"> &#9776; </label>
+ <div id="progressbar"></div>
+ <div id="scrollPath"></div>
+  <nav class="menu">
+       <ul>
+          <li><a href="../index.html">Início</a></li>
+        <li><a href="#">Geometrias e Progressões</a>
+        <ul>
+           <li><a href="geometria_analitica.html">Analítica</a></li>
+           <li><a href="geometria_plana.html">Plana</a></li>
+           <li><a href="gs.html">Espacial</a></li>
+           <li><a href="Prog.html">PA e PG</a></li>
+        </ul>
+        </li>
+         <li><a href="#">Calculadora</a>
+        <ul>
+          <li><a href="../compilador/plana.html">Geometria Plana</a></li>
+          <li><a href="../compilador/anal.html">Geometria Analítica</a></li>
+          <li><a href="../compilador/PA.html">PA e PG</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Vídeo Aulas</a>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=XAK7m6SRLPw&list=PLEfwqyY2ox86GfOHvSgN5iJZKNN_AUlU_" target="blank">Geometria Plana</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ZJ5Aqwcx9f4&list=PLEfwqyY2ox858XssXB_f-Jx42fgTb0Vsn" target="blank">Geometria Analítica</a></li>
+            <li><a href="https://www.youtube.com/watch?v=v_PQnBk-8Mc&list=PLEfwqyY2ox87GYPpLcP1kv2Nt9xu0oBTy" target="blank">Geometria Espacial</a></li>
+            <li><a href="https://www.youtube.com/watch?v=QE3GieQD-Ps&list=PLEfwqyY2ox85NtaWwua8KHQYEx5I7qe3E" target="blank">PA e PG</a></li>
+          </ul>
+        <li><a href="#">Contatos/Outros</a>
+          <ul>
+          <li><a href="https://www.facebook.com/geometria.aolado.1" target="blank">Facebook</a></li>
+          <li><a href="https://instagram.com/geometria_suporte?igshid=1gl7gsmw98cfa" target="blank">Instagram</a></li>
+          <li><a href="../desenvolvedores/desenvolver.html" target="blank">Desenvolvedores</a></li>
+          <li><a href="../outros/relogio.html" target="blank">Relógio</a></li>
+          <li><a href="../outros/corona.html" target="blank">Covid-19</a></li>
+        </li>
+        </ul>
+        </nav>
+       <nav class="nav_tabs">
+      <ul>
+        <li>
+          <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+          <label for="tab1" class="tab_label">Geometria Analítica</label>
+          <div class="tab-content">
+            <article>
+             <p class="justify">A Geometria Analı́tica baseia-se na ideia de representar os pontos da reta
+                por números reais, os pontos do plano por pares ordenados de números
+                reais e os pontos do espaço por ternos ordenados de números reais.
+                Dentro dessa concepção, as linhas e as superfı́cies, no plano e no espaço,
+                são descritas por meio de equações. Isto permite tratar algebricamente
+                muitas questões geométricas e, reciprocamente, interpretar de forma
+                geométrica certas situações algébricas.
+                A interconexão entre Geometria e Álgebra resultante desse ponto de
+                vista foi responsável por extraordinários progressos na Matemáttica e
+                suas aplicações.
+            </p>
+            <p class="justify">
+                No que se segue, apresentaremos as noções básicas de Geometria
+                Analı́tica, enfatizando seus aspectos mais relevantes para um estudo in-
+                trodutório.
+                Admitiremos conhecidos os fatos mais elementares da Geometria como,
+                por exemplo, que por dois pontos dados passa uma, e somente uma, reta;
+                que por um ponto dado fora de uma reta passam uma única paralela e
+                uma única perpendicular a essa reta, etc.
+            </p>
+            <h3>Coordenadas na Reta</h3>
+            <p class="justify">
+                Admitimos fixada, de uma vez por todas, uma unidade de comprimento.
+                Dados os pontos A, B quaisquer, o comprimento do segmento de reta
+                AB chama-se a distância entre os pontos A e B. Escrevemos d(A, B) ou
+                AB para indicar essa distância, que é um número real.
+            </p>
+            <p class="justify">
+                Convencionaremos pôr d(A, A) = 0. Se A 6= B, tem-se d(A, B) > 0.
+                Além disso, vale
+            </p>
+            <p class="justify center">
+                d(A, C) + d(C, B) = d(A, B)
+            </p>
+            <p class="justify">
+                se, e somente se, o ponto C pertence ao segmento de reta AB. É claro
+                também que d(A, B) = d(B, A).
+            </p>
+            <p class="justify">
+                A noção de distância permite introduzir coordenadas sobre uma reta,
+                ou seja, representar os pontos da reta por meio de números reais. Para
+                fazer isto, será necessário orientar a reta e escolher um dos seus pontos
+                como origem.<br>
+                Seguem-se os detalhes desse procedimento.
+            </p>
+            <h3>Definição (Reta orientada).</h3>
+            <p class="justify">
+                Uma reta diz-se orientada quando sobre ela se escolheu um sentido de
+                percurso, chamado positivo; o sentido inverso chama-se negativo.
+            </p>
+            <img class="center_img" src="../img/geoAnalitica/1.png">
+            <p class="justify">
+                Numa reta orientada, diz-se que o ponto B está à direita do ponto A
+                (portanto A está à esquerda de B) quando o sentido de percurso de A
+                para B é positivo.
+            </p>
+            <img class="center_img" src="../img/geoAnalitica/2.png">
+            <h3>Definição (Eixo).</h3>
+            <p class="justify">
+                Um eixo é uma reta orientada na qual se fixou um ponto O, chamado a
+                origem.
+            </p>
+            <img class="center_img" src="../img/geoAnalitica/3.png">            
+            <p class="justify">
+                Todo eixo E pode ser posto, de modo natural, em correspondência
+                biunı́voca com o conjunto R dos números reais, do seguinte modo:<br>
+                <ul class="listagem">
+                  <li>A origem O do eixo faz-se corresponder o número zero.<br></li>
+                  <li>A cada ponto X de E situado à direita de O corresponde o número real
+                  positivo x = d(O, X) = distância de X à origem = comprimento do
+                  segmento de reta OX.<br></li>
+                  <li>Aos pontos situados à esquerda de O correspondem números reais ne-
+                  gativos, cujos valores absolutos medem as distâncias desses pontos à
+                  origem.</li>
+                </ul>
+            </p>                
+            <p class="justify">
+                Portanto, a cada ponto X no eixo E corresponde o número real
+                x = d(O, X) se X está à direita de O e x = −d(O, X) se X está à
+                esquerda de O.
+
+            </p>
+            <p class="justify">
+                O número real x, que corresponde ao ponto X do eixo E da maneira
+                acima indicada, chama-se a coordenada desse ponto. Reciprocamente,
+                para cada número real x existe um (único) ponto X em E cuja coorde-
+                nada é x.
+            </p> 
+            <img class="center_img" src="../img/geoAnalitica/4.png">                                       
+            <p class="justify">
+                Se x e y são respectivamente as coordenadas dos pontos X e Y do eixo
+                E então tem-se x < y se, e somente se, X está à esquerda de Y . Além
+                disso, tem-se
+            </p>
+            <p class="justify center">
+                d(X, Y ) = |x − y|.
+            </p>                
+            <p class="justify">
+                A importante igualdade d(X, Y ) = |x − y| se demonstra usando (além
+                da relação evidente d(A, B) = d(B, A)) o fato de que se A, B, C são
+                pontos de uma reta tais que C está situado entre A e B então
+            </p>
+            <p class="justify center">
+                d(A, B) = d(A, C) + d(C, B).
+            </p>                
+                Com efeito, dados os pontos X e Y sobre o eixo E, com coordenadas
+                respectivas x e y, sem perda de generalidade podemos supor que X
+                esteja à esquerda de Y . Então há 3 casos possı́veis:<br><br>
+
+                <ol style="list-style-type: upper-latin;">
+                  <li>O está entre X e Y (logo x < 0 < y);</li><br>
+                  <li>Y está entre X e O (logo x < y < 0);</li><br>
+                  <li>X está entre O e Y (logo 0 < x < y).</li><br>
+                </ol>
+              <br><br>
+              No primeiro caso, tem-se
+            <p class="justify center">
+                d(X, Y ) = d(X, O) + d(O, Y ) = −x + y = |x − y|.
+            </p><br>
+            <p class="justify">
+                No segundo caso,
+            </p>                
+            <p class="justify center">
+                d(O, X) = d(O, Y ) + d(Y, X),
+            </p><br>
+            <p class="justify">
+                ou seja, −x = −y + d(X, Y ), donde
+            </p>                
+
+            <p class="justify center">
+                d(X, Y ) = y − x = |x − y|.
+            </p><br>
+            <p class="justify">
+                Finalmente, no terceiro caso,
+            </p>                
+            <p class="justify center">
+                d(O, Y ) = d(O, X) + d(X, Y ),
+            </p><br>
+            <p class="justify">
+                isto é, y = x + d(X, Y ) , donde
+            </p>                
+            <p class="justify center">
+                d(X, Y ) = y − x = |x − y|.
+            </p><br>
+            <img class="center_img" src="../img/geoAnalitica/5.png">            
+            <p class="justify">
+                Se A e B são pontos do eixo E, com A à esquerda de B, e suas coordena-
+                das respectivas são a e b, então a coordenada x de um ponto arbitrário
+                X do segmento de reta AB é um número x tal que a ≤ x ≤ b. Noutras
+                palavras, ao segmento de reta AB ⊂ E corresponde o intervalo [a, b] ⊂ R.
+            </p>                
+            <h3>Parametrização de um segmento.</h3>
+            <p class="justify">
+                Para cada ponto X do segmento de reta AB, tem-se evidentemente
+                d(A, X) ≤ d(A, B), logo a razão t = 
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>d(A, X)</mn>
+                    </mrow>
+                    <mn>d(A, B)</mn>
+                  </mfrac>
+                </math>
+                é um número real compreendido entre 0 e 1. Quando X = A tem-se t = 0 e, quando X = B, vale t = 1.
+              <br><br>
+                Se, para cada t ∈ [0, 1], chamarmos de Xt o ponto do segmento de reta AB tal que 
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>d(A,</mn>
+                      <msub><mi>X</mi><mn>t</mn></msub>)
+                    </mrow>
+                    <mn>d(A, B)</mn>
+                  </mfrac>
+                </math>
+                = t, veremos que a coordenada 
+                <math>
+                  <mrow>
+                    <msub><mi>x</mi><mn>t</mn></msub>
+                  </mrow>
+                </math>
+                do ponto 
+                <math>
+                  <mrow>
+                    <msub><mi>X</mi><mn>t</mn></msub>
+                  </mrow>
+                </math>                
+                está relacionada com as coordenadas a e b dos pontos A e B pela igualdade
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <msub><mi>x</mi><mn>t</mn></msub>
+                      <mo>-</mo>
+                      <mn>a</mn>
+                    </mrow>
+                    <mn>b - a</mn>
+                  </mfrac>
+                </math>
+                = t, ou seja
+            </p>
+            <p class="justify center">
+                <math>
+                  <mrow>
+                    <msub><mi>x</mi><mn>t</mn></msub>
+                  </mrow>
+                </math>                
+                 = (1 − t)a + tb = a + t(b − a).
+            </p>                
+            <img class="center_img" src="../img/geoAnalitica/6.png">
+            <h3>Exemplo 1.</h3>
+            <p class="justify">
+                Quando t =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math>
+                o ponto
+                <math>
+                  <mrow>
+                    <msub><mi>X</mi><mn>t</mn></msub>
+                  </mrow>
+                </math>
+                =
+                <math>
+                  <mrow>
+                    <msub><mi>X</mi><mn>
+                      1/2
+                    </mn></msub>
+                  </mrow>
+                </math>  
+                chama-se ponto médio do segmento AB; sua coordenada
+            </p>
+            <p class="justify center">
+                <math>
+                  <mrow>
+                    <msub><mi>x</mi><mn>
+                      1/2
+                    </mn></msub>
+                  </mrow>
+                </math>
+                =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math>
+                a +
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math>
+                b =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a + b</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math>                                 
+            </p>                
+            <p class="justify">
+              é a média aritmética entre as coordenadas a e b dos pontos A e B.
+            </p>
+            <h3>Exemplo 2</h3>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            </article>
+          </div>
+        </li>
+    </nav>
+    <script type="text/javascript">
+      let progress = document.getElementById('progressbar');
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function() {
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+ </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+       window.addEventListener('scroll', function(){
+         var scroll = document.querySelector('.scrollTop');
+         scroll.classList.toggle("active" , window.scrollY > 200)
+       })
+       function scrollToTop(){
+         window.scrollTo({
+           top: 0,
+           behavior: 'smooth'
+         })
+       }
+    </script>
+</body>
+</html>

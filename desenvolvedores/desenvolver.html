@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta  name = " viewport " content = " width = largura do dispositivo, escala inicial = 1, escala mínima = 1, escala máxima = 1 ">
+    <link rel="stylesheet" type="text/css" href="swiper.min.css">
+    <title>Desenvolvedores</title>
+    <style>
+    body {
+      background: #202626;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 130px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 380px;
+      background: #fff;
+     }
+     .swiper-slide .imgBx{
+       width: 100%;
+       height: 300px;
+       overflow: hidden;
+     }
+     .swiper-slide .imgBx img{
+       width: 100%;
+     }
+     .swiper-slide .details{
+       box-sizing: border-box;
+       padding: 20px;
+     }
+     .swiper-slide .details h3{
+       margin: 0;
+       padding: 0;
+       font-size: 20px;
+       text-align: center;
+       line-height: 20px;
+     }
+     .swiper-slide .details h3 span{
+       font-size: 16px;
+       color: #f44336;
+     }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img1.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Todo o Grupo<br><span>Criadores</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img2.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>1° Encontro<br><span>Criadores</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img3.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Abdula e Leonardo<br><span>Desenvolvedores</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img4.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>2° Econtro<br><span>Criadores</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img5.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Abdula Silva<br><span>CEO, Desenvolvedor e Criador</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img6.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Anthony Tauan<br><span>Desenvolvedor e Criador</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img7.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Everton Neves<br><span>Criador</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img8.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Leonardo Morais<br><span>Desenvolvedor</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img9.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Landry<br><span>Professor Orientador</span></h3>
+
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img10.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Pedro Henrique<br><span>Especialista em TI</span></h3>
+
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+
+            <div class="imgBx">
+
+              <img src="img11.jpg">
+
+            </div>
+
+            <div class="details">
+
+              <h3>Gabriel Santos<br><span>Co-Criador</span></h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+      </div>
+
+
+
+    <script type="text/javascript" src="swiper.min.js"></script>
+
+    <script>
+
+        var swiper = new Swiper('.swiper-container', {
+
+          effect: 'coverflow',
+
+          grabCursor: true,
+
+          centeredSlides: true,
+
+          slidesPerView: 'auto',
+
+          coverflowEffect: {
+
+            rotate: 60,
+
+            stretch: 0,
+
+            depth: 500,
+
+            modifier: 1,
+
+            slideShadows : true,
+
+          },
+
+          pagination: {
+
+            el: '.swiper-pagination',
+
+          },
+
+        });
+
+      </script>
+
+</body>
+
+</html>

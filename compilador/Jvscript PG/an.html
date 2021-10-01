@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-énessimo Termo</title>
+</head>
+
+      <body size="30" color="black">
+
+      <script language="javascript">
+
+             var priter, raz, positer; 
+
+             var an;
+
+             
+
+             priter = parseFloat(window.prompt("Informe o Primeiro Termo: ", ""));
+
+             raz = parseFloat(window.prompt("Informe a razão da PG: ", ""));
+
+             positer = parseFloat(window.prompt("Informe a Posição do Termo na Sequência: ", ""));
+
+             an = priter * Math.pow(raz,positer-1);
+
+             alert("A" + positer +"° Termo da Sequência é:  " + an);
+
+      </script>
+
+      </body>
+
+ </html>

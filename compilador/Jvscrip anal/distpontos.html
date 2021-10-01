@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distância de Pontos</title>
+</head>
+      <body size="30" color="black">
+      <script language="javascript">
+             var xa, xb, ya, yb;
+             var px, py;
+             var quadrado1,  quadrado2;
+             var distancia;
+             var raiz;
+
+             xa = parseFloat(window.prompt("Informe a distância que o 1 ponto percorre no eixo X(Xa): ", ""));
+             xb = parseFloat(window.prompt("Informe a distância que o 2 ponto percorre no eixo X(Xb): ", ""));
+             px = (xb - xa);
+             quadrado1 = Math.pow(px,2);
+             ya = parseFloat(window.prompt("Informe a distância que o 1 ponto percorre no eixo Y(Ya): ", ""));
+             yb = parseFloat(window.prompt("Informe a distância que o 2 ponto percorre no eixo Y(Yb): ", ""));
+             py = (yb - ya);
+             quadrado2 = Math.pow(py,2);
+             distancia = (quadrado1 + quadrado2);
+             raiz = Math.sqrt(distancia);
+
+             alert("A distância entre esses dois pontos é:  " + raiz);
+      </script>
+      </body>
+ </html>
+   
+   
