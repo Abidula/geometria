@@ -29,7 +29,7 @@
  .link {
   width: 100%;
   height: 5px;
-  font-family: cursive;
+  /*font-family: cursive;*/
  }
  .link ul {
   list-style: none;
@@ -67,7 +67,7 @@
     color:#fff;
     cursor: pointer;
     text-align: center;
-    font-family: fantasy;
+    /*font-family: fantasy;*/
   }
   .nav_tabs .rd_tab { 
   display:none;
@@ -91,18 +91,18 @@
 .tab-content h2{
   padding: 10px;
   color: #0E1810;
-  font-family: Cursive;
+  /*font-family: Cursive;*/
 }
 .tab-content article{
   padding: 30px;
   color: #0E1810;
-  font-family: Cursive;
+  /*font-family: Cursive;*/
 }
  .menu {
   width: 100%;
   height: 60px;
   background: #222;
-  font-family: fantasy;
+  /*font-family: fantasy;*/
  }
  .menu ul {
   list-style: none;
@@ -145,7 +145,7 @@
   padding: 5px;
   background-color: #222;
   color: #fff;
-  font-family: "fantasy";
+  /*font-family: "fantasy";*/
   text-align: center;
   font-size: 30px;
   cursor: pointer;
@@ -275,6 +275,7 @@ ul.listagem{
 p.justify{
   font-size: 16px;
   margin-bottom: 25px;
+  line-height: 30px;
 }
 p.center{
   text-align: center;
@@ -608,13 +609,427 @@ img.center_img{
                     </mrow>
                     <mn>2</mn>
                   </mfrac>
-                </math>                                 
+                </math>                 
             </p>                
             <p class="justify">
               é a média aritmética entre as coordenadas a e b dos pontos A e B.
             </p>
             <h3>Exemplo 2</h3>
             <p class="justify">
+                Tomando t = 
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>3</mn>
+                  </mfrac>
+                </math>,
+                obtemos o ponto X =
+                <math>
+                  <mrow>
+                    <msub><mi>X</mi><mn>1/3</mn></msub>
+                  </mrow>
+                </math>                  
+                cuja coordenada 
+            </p>                
+            <p class="justify center">
+                X = (1 -
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>3</mn>
+                  </mfrac>
+                </math>) a +
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>3</mn>
+                  </mfrac>
+                </math>b =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>2</mn>
+                    </mrow>
+                    <mn>3</mn>
+                  </mfrac>
+                </math>a +
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>3</mn>
+                  </mfrac>
+                </math>b.                                       
+            </p>
+            <p class="justify">
+                é o número que separa o intervalo [a, b] em dois subintervalos [a, x] e
+                [x, b] com
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>x - a</mn>
+                    </mrow>
+                    <mn>b - a</mn>
+                  </mfrac>
+                </math> =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>3</mn>
+                  </mfrac>
+                </math>                          
+            </p>                
+            <h3>Observação 1</h3>
+            <p class="justify">
+                Quando estudamos os números reais, fazemos a cada x ∈ R corresponder
+                um ponto X sobre o eixo E. Em Geometria Analı́tica, o processo é
+                inverso: procura-se associar a cada ponto do eixo E um número, chamado
+                sua coordenada. Para isso, admitimos que exista a noção de distância
+                entre dois pontos desse eixo, isto é, que tenha sido fixada uma unidade
+                de comprimento.
+            </p>
+            <h3>Observação 2</h3>            
+            <p class="justify">
+                Quando A é o ponto médio do segmento de reta XX', diz-se que X' é o
+                simétrico de X relativamente ao ponto A. Se A, X e X' estão localizados
+                sobre um eixo E e suas coordenadas são respectivamente a, x e x' tem-se
+                então a =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>x + x'</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math>                   
+                , logo x' = 2a − x. Note que desta igualdade resulta x = 2a − x'. 
+                Isto corresponde ao fato de que X é por sua vez o simétrico
+                de X' relativamente ao ponto A.
+            </p>
+            <img class="center_img" src="../img/geoAnalitica/7.png">
+            <h3>Exemplo 3</h3>
+            <p class="justify">
+                Se no eixo E os pontos A e B têm respectivamente coordenadas 3 e 17
+                então a coordenada do ponto médio do segmento AB é 10 e a coordenada
+                do ponto B', simétrico de B em relação A, é -11.
+            </p>                
+            <img class="center_img" src="../img/geoAnalitica/8.png">
+            <h3>Coordenadas no Plano</h3>
+            <p class="justify">
+                Indica-se como R² o conjunto formado pelos pares ordenados (x, y), onde
+                x e y são números reais. <br><br>
+                Dados (x, y) e (x', y') em R² , tem-se (x, y) = (x', y') se, e somente se,
+                x = x' e y = y'. O número x chama-se a primeira coordenada e o número
+                y a segunda coordenada do par (x, y). Observe, por exemplo, que os pares
+                ordenados (2, 3) e (3, 2) são diferentes pois a primeira coordenada de
+                (2, 3) é 2 enquanto que a primeira coordenada de (3, 2) é 3.<br><br>
+                Por outro lado, os conjuntos {2, 3} e {3, 2} são iguais pois um objeto
+                pertence a um deles se, e somente se, pertence ao outro. Portanto, um
+                par ordenado não é a mesma coisa que um conjunto com dois elementos.
+                No par ordenado (x, y) pode-se ter x = y mas se {x, y} é um conjunto
+                com dois elementos tem-se necessariamente x ≠ y.<br><br>
+                Mostraremos agora como usar R 2 para obter um modelo aritmérico de
+                um plano
+            </p>
+            <img class="center_img" src="../img/geoAnalitica/9.png">
+            <h3>Definição (Sistema de coordenadas)</h3>
+            <p class="justify">
+                Um sistema de coordenadas (cartesianas) no plano II consiste num par
+                de eixos perpendiculares OX e OY contidos nesse plano, com a mesma
+                origem O. OX chama-se o eixo das abcissas e OY é o eixo das ordenadas.
+                O sistema é indicado com a notação OXY.<br><br>
+                A escolha de um sistema de coordenadas no plano II permite estabelecer
+                uma correspondência biunı́voca II → R² . A cada ponto P do plano II
+                fazemos corresponder um par ordenado (x, y) ∈ R² . Os números x e y
+                são as coordenadas do ponto P relativamente ao sistema OXY : x é a
+                abcissa e y é a ordenada de P.<br><br>
+                As coordenadas x, y do ponto P são definidas do seguinte modo:<br><br>
+                Se P estiver sobre o eixo OX, o par ordenado que lhe corresponde é
+                (x, 0), onde x é a coordenada de P no eixo OX. Se P estiver sobre o
+                eixo OY, a ele corresponde o par (0, y), onde y é a coordenada de P nesse
+                eixo. Se P não está em qualquer dos eixos, traçamos por P uma paralela
+                ao eixo OY, a qual corta OX no ponto de coordenada x e uma paralela
+                ao eixo OX, a qual corta OY no ponto de coordenada y. Então x será
+                a abcissa e y a ordenada do ponto P. Noutras palavras, (x, y) ∈ R² é o
+                par ordenado de números reais que corresponde ao ponto P.
+            </p>                
+            <img class="center_img" src="../img/geoAnalitica/10.png">
+
+            <p class="justify">
+                O ponto O, origem do sistema de coordenadas, tem abcissa e ordenada
+                ambas iguais a zero. Assim, a ele corresponde o par (0, 0) ∈ R².<br><br>
+                O emprego de coordenadas no plano serve a dois propósitos que se com-
+                plementam. O primeiro é o de atribuir um significado geométrico (e com
+                isto dar um maior conteúdo intuitivo) a fatos de natureza numérica,
+                como o comportamento de uma função real de uma variável real, que
+                ganha muito em clareza quando se olha para seu gráfico. O segundo
+                propósito do uso das coordenadas vai no sentido oposto: recorre-se a
+                elas a fim de resolver problemas da Geometria. Este é o objetivo da
+                Geometria Analı́tica. No primeiro caso, a ênfase recai sobre a corres
+                pondência R² → II e no segundo sobre sua inversa II → R² . Na prática,
+                esses dois pontos de vista se entrelaçam: para estabelecer os fatos iniciais
+                da Geometria Analı́tica usam-se os resultados básicos da Geometria
+                Euclidiana.<br><br>
+                Em princı́pio o plano II, cujos elementos são pontos, não é a mesma coisa
+                que o conjunto R² , cujos elementos são pares de números reais. Entre-
+                tanto, quando fixarmos um sistema de coordenadas em II, usaremos a
+                correspondência II → R² para identificar cada ponto P do plano com o
+                par ordenado (x, y) que lhe corresponde. Assim, escrevemos P = (x, y)
+                querendo dizer com isto que P é o ponto do plano cuja abcissa é x e cuja
+                ordenada é y.
+            </p>
+            <img class="center_img" src="../img/geoAnalitica/11.png">            
+            <p class="justify">
+                Os eixos ortogonais OX e OY decompõem o plano II em quatro regiões,
+                cada uma das quais se chama um quadrante. O primeiro quadrante é
+                o conjunto dos pontos P = (x, y) tais que x ≥ 0 e y ≥ 0. O segundo
+                quadrante é formado pelos pontos P = (x, y) com x ≤ 0 e y ≥ 0. O
+                terceiro, pelos pontos P = (x, y) com x ≤ 0 e y ≤ 0. Finalmente, os
+                pontos P = (x, y) do quarto quadrante são aqueles em que x ≥ 0 e y ≤ 0.<br><br>
+                Fixando o sistema de coordenadas OXY no plano Π, o primeiro e o
+                terceiro quadrantes formam dois ângulos retos, opostos pelo vértice. Os
+                pontos P = (x, y) da bissetriz comum desses dois ângulos são (como
+                todos os pontos de uma bissetriz) equidistantes dos lados, logo têm ab-
+                cissa e ordenada iguais (ambas positivas no primeiro quadrante e ambas
+                negativas no terceiro). Esta reta ∆ chama-se a diagonal do plano II
+                (relativamente ao sistema OXY). Tem-se portanto P = (x, y) ∈ ∆ se, e
+                somente se, x = y.<br><br>
+                Analogamente, um ponto Q = (x, y) pertence à bissetriz ∆' comum ao
+                segundo e quarto quadrantes se, e somente se, x = −y.   
+            </p>
+            <img class="center_img" src="../img/geoAnalitica/12.png">                     
+            <h3>Ponto Médio de um Segmento</h3>   
+            <p class="justify">
+                Dados os pontos A = (a, b) e A' = (a', b'), quais são as coordenadas do
+                ponto médio M = (x, y) do segmento de reta AA'? A resposta é
+            </p>                
+            <p class="justify center">
+                x = 
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a + a'</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math> e y =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>b + b'</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math>     
+            </p>
+            <p class="justify">
+                e a ela chegaremos usando um pouco de Geometria Plana.<br><br>
+                Suponhamos inicialmente que a ≠ a' e b ≠ b' , isto é, o segmento AA' não 
+                é vertical (paralelo ao eixo OY) nem horizontal (paralelo ao eixo OX).
+                Então, considerando os pontos P = (x, b) e Q = (a', y), vemos que APM e MQA' 
+                são triângulos retângulos cujas hipotenusas AM e MA' têm o mesmo comprimento, 
+                já que M é o ponto médio de AA'. Além disso, os ângulos agudos PÂM e QMA' são 
+                congruentes porque os lados AP e MQ são paralelos. Portanto APM e MQA' são triângulos congruentes.
+            </p>                
+            <img class="center_img" src="../img/geoAnalitica/13.png">                     
+            <p class="justify">
+                Daı́ resulta que os segmentos AP e M Q têm o mesmo comprimento. Logo, pondo
+                <math>
+                  <mrow>
+                    <msub><mi>A</mi><mn>0</mn></msub>
+                  </mrow>
+                </math>                
+                = (a, 0),
+                <math>
+                  <mrow>
+                    <msub><mi>M</mi><mn>0</mn></msub>
+                  </mrow>
+                </math>  
+                = (x, 0) e   
+                <math>
+                  <mrow>
+                    <msub><mi>A'</mi><mn>0</mn></msub>
+                  </mrow>
+                </math>                                  
+                = (a', 0), concluı́mos que
+                <math>
+                  <mrow>
+                    <msub><mi>M</mi><mn>0</mn></msub>
+                  </mrow>
+                </math>                  
+                é o ponto médio do segmento
+                <math>
+                  <mrow>
+                    <msub><mi>A</mi><mn>0</mn></msub>
+                    <msub><mi>A'</mi><mn>0</mn></msub>
+                  </mrow>
+                </math>                  
+                no eixo OX. Segue-se então que x =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a + a'</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math>        
+                . De modo análogo se vê que y =     
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>b + b'</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math>. <br><br>
+                Quando o segmento AA' é horizontal (isto é, b = b') ou vertical (a = a'),
+                o argumento acima se simplifica, reduzindo-se imediatamente ao caso do
+                ponto médio de um segmento localizado sobre um eixo.               
+            </p>
+            <h3>Exemplo 4</h3>
+            <p class="justify">
+                Encontre as coordenadas do ponto médio do segmento AB, onde
+                A = (1, 2) e B = (5, 4).
+            </p>
+            <h3>Solução.</h3>
+            <p class="justify">
+                Seja M = (x, y) as coordenadas do ponto médio do segmento AB. Então
+            </p>                
+            <p class="justify center">
+                x = 
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1 + 5</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math> = 3 e y =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>2 + 4</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math> = 3  
+            </p>
+            <p class="justify">
+                Portanto
+            </p>                
+            <p class="justify center">
+                M(3, 3).
+            </p>
+            <p class="justify">
+                Se os pontos P = (x, y) e Q = (x', y) têm a mesma ordenada y então a
+                distância d(P, Q) entre eles é igual à distância
+            </p> 
+            <p class="justify center">
+                |x − x'| = 
+                <math>
+                    <msqrt>
+                      <mn>(x - x')²</mn>
+                    </msqrt>
+                </math>
+            </p>                
+
+            <p class="justify">
+                entre suas projeções sobre o eixo OX.<br><br>
+                Analogamente, se P = (x, y) e Q' = (x, y') têm a mesma abcissa x
+                então
+            </p>
+            <p class="justify center">
+                d(P, Q) = |y − y'| = 
+                <math>
+                    <msqrt>
+                      <mn>(y - y')²</mn>
+                    </msqrt>
+                </math>
+            </p>                
+            <p class="justify">
+                que é igual à distância entre as projeções de P e Q sobre o eixo OY.   
+            </p>
+            <img class="center_img" src="../img/geoAnalitica/14.png">                     
+            <img class="center_img" src="../img/geoAnalitica/15.png">                     
+            <img class="center_img" src="../img/geoAnalitica/16.png">                     
+
+            <p class="justify">
+                Se, entretanto, P = (x, y) e Q = (u, v) têm abcissas e ordenadas dife-
+                rentes então, considerando o ponto S = (u, y), vemos que P SQ é um
+                triângulo retângulo cuja hipotenusa é P Q. Como P e S têm a mesma
+                ordenada, enquanto S e Q têm a mesma abcissa, segue-se que
+            </p> 
+            <p class="justify center">
+                d(P, S) = |x − u| e d(S, Q) = |y − v|.
+            </p>                
+            <p class="justify">
+                Pelo Teorema de Pitágoras, podemos escrever
+            </p>
+            <p class="justify center">
+                d(P, Q)² = d(P, S)² + d(S, Q)².
+            </p>                
+
+            <p class="justify">
+                Portanto,
+            </p>
+            <p class="justify center">
+                d(P, Q)² = (x − u)² + (y − v)²,
+            </p> 
+            <p class="justify">
+                Logo,
+            </p>                
+            <p class="justify center">
+                d(P, Q) =
+                <math>
+                    <msqrt>
+                      <mn>(x - u)² + (y - v)².</mn>
+                    </msqrt>
+                </math>                
+            </p>
+            <p class="justify">
+                Em particular, a distância do ponto P = (x, y) à origem O = (0, 0) é
+            </p>                
+            <p class="justify center">
+                d(O, P) =  
+                <math>
+                    <msqrt>
+                      <mn>x² + y².</mn>
+                    </msqrt>
+                </math>                   
+            </p>
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>   
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
 
             </p>                
 
@@ -631,6 +1046,166 @@ img.center_img{
             <p class="justify">
 
             </p>
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>   
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>   
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>   
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>   
+            <p class="justify">
+
+            </p> 
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                                                                                                                                             
             </article>
           </div>
         </li>
