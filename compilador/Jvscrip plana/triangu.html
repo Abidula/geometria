@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Triângulo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var brti, alttri,atri;
-             
-             btri = parseFloat(window.prompt("Informe a base do triângulo", ""));
-             alttri = parseFloat(window.prompt("Informe a altura do triângulo", ""));
-             atri = btri * alttri / 2;
-             alert("Área do Triângulo é:  " + atri);
-      </script>
-      </body>
- </html>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular área do triângulo</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="altura">Insira a altura do triângulo</label>
+        <input class="input_calculadora" type="text" id="altura">
+        
+        <label for="base">Insira a base do triângulo</label>
+        <input class="input_calculadora" type="text" id="base">
+        
+        <input type="button" value="Calcular" onclick="calcularTriangulo();">
+
+        <math style="font-family: sans-serif;">
+            area do triangulo = &nbsp
+          <mfrac>
+            <mrow>
+              <mn>base x altura</mn>
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+        </math>
+    </div>
+</div>
+<script language="javascript">
+
+    function calcularTriangulo(){
+        var base, altura,area; 
+        
+        base = document.getElementById('base').value;
+        altura = document.getElementById('altura').value;
+        area = (base * altura) / 2;
+        
+        document.getElementById('resultado').innerHTML = area;
+    }
+</script>
+</body>
+</html>
    

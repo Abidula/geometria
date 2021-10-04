@@ -4,15 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Quadrado</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var lado, area;
-             
-             lado = parseFloat(window.prompt("Informe o lado do Quadrado: ", ""));
-             area = lado * lado;
-             alert("Área do Quadrado é:  " + area);
-      </script>
-      </body>
- </html>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular área do quadrado</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="lado">Insira o lado do quadrado</label>
+        <input class="input_calculadora" type="text" id="lado">
+        
+        <input type="button" value="Calcular" onclick="calcularQuadrado();">
+        
+        <math style="font-family: sans-serif;">
+            area do triangulo = &nbsp
+            <mrow>
+              <mn>lado * lado</mn>
+            </mrow>
+        </math>        
+    </div>
+</div>
+
+<script language="javascript">
+
+    function calcularQuadrado(){
+        var lado, area; 
+        
+        lado = document.getElementById('lado').value;
+        area = lado * lado;
+        
+        document.getElementById('resultado').innerHTML = area;
+    }
+</script>
+</body>
+</html>
    
