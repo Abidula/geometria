@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Triângulo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body size="30" color="black">
+
+<style type="text/css">
+
+</style>
+<div class="card">
+<h2>Calcular área do triângulo</h2>
+    <div class="visor">
+        <span id="resultado"></span>
+    </div>
+    <label for="altura">Insira a altura do triângulo</label>
+    <input class="input_calculadora" type="text" id="altura">
+    <label for="base">Insira a base do triângulo</label>
+    <input class="input_calculadora" type="text" id="base">
+    <input type="button" value="Calcular" onclick="calcularTriangulo();">
+
+<script language="javascript">
+
+function calcularTriangulo(){
+     var base, altura,area; 
+     base = document.getElementById('base').value;
+     altura = document.getElementById('altura').value;
+     area = (base * altura) / 2;
+     document.getElementById('resultado').innerHTML = area;
+}
+</script>
+</div>
+</body>
+</html>
+   
