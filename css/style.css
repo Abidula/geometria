@@ -1,0 +1,36 @@
+body{
+    font-family: sans-serif;
+    background-image: url("../img/fundo2.jpg");  
+}
+.card{
+	box-shadow: 0 0 5px black;
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+   	margin: 0 auto;
+}
+#resultado{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    font-size: 24px;
+    padding: 30px 25px;
+}
+.visor{
+    width: 400px;
+    height: 100px;
+    border-radius: 25px;
+    background-color: #eee;
+    margin-bottom: 25px;
+}
+input{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px 25px;
+    margin-bottom: 25px;
+}
