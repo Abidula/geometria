@@ -4,16 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Trapézio</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">    
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var bmaio, bmeno, atrap, area;
-             
-             bmaio = parseFloat(window.prompt("Informe a base maior do trapézio: ", ""));
-             bmeno = parseFloat(window.prompt("Informe a base menor do trapézio: ", ""));
-             atrap = parseFloat(window.prompt("Informe a altura do trapézio: ", ""));
-             area = (bmaio + bmeno) * atrap / 2;
-             alert("Área do trapézio é: " + area);
-      </script>
-      </body>
- </html>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular área do triângulo</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="altura">Insira a base maior trapézio</label>
+        <input class="input_calculadora" type="text" id="maior">
+        
+        <label for="base">Insira a base menor trapézio</label>
+        <input class="input_calculadora" type="text" id="menor">
+        
+        <label for="base">Insira a altura trapézio</label>
+        <input class="input_calculadora" type="text" id="altura">
+
+        <input type="button" value="Calcular" onclick="calcularTrapezio();">
+
+        <math style="font-family: sans-serif;">
+            area do trapézio = &nbsp
+          <mfrac>
+            <mrow>
+              <mn>(diagonal maior + diagonal menor) * altura</mn>
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+        </math>
+    </div>
+</div>
+<script language="javascript">
+
+    function calcularTrapezio(){
+        var maior, menor, altura, area; 
+        
+        maior = document.getElementById('maior').value;
+        menor = document.getElementById('menor').value;
+        altura = document.getElementById('altura').value;
+
+        area = (parseFloat(maior) + parseFloat(menor)) * altura / 2;
+        document.getElementById('resultado').innerHTML = area;
+    }
+</script>
+</body>
+</html>

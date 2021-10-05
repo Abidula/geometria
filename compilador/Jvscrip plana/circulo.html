@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área do Circulo</title>
+    <title>Área do Quadrado</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var raio, area, circun;
-             
-             raio = parseFloat(window.prompt("Informe o raio do círculo", ""));
-             area = Math.PI*(raio*raio);
-             alert("Área do círculo é: "  + area);      
-             /**circun = (2 * 3,14 * raio);
-             alert("Área da circunferência é: " + circun);*/
-      </script>
-      </body>
- </html>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular área do circulo</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="lado">Insira o raio do circulo</label>
+        <input class="input_calculadora" type="text" id="raio">
+        
+        <input type="button" value="Calcular" onclick="calcularCirculo();">
+        
+        <math style="font-family: sans-serif;">
+            area do circulo = &nbsp
+            <mrow>
+              <mn>π x raio²</mn>
+            </mrow>
+        </math>        
+    </div>
+</div>
+
+<script language="javascript">
+
+    function calcularCirculo(){
+        var raio, area; 
+        
+        raio = document.getElementById('raio').value;
+        area = Math.PI * (raio * raio);
+        
+        document.getElementById('resultado').innerHTML = area;
+    }
+</script>
+</body>
+</html>
+   

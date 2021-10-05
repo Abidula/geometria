@@ -4,28 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distância de Pontos</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">    
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var xa, xb, ya, yb;
-             var px, py;
-             var quadrado1,  quadrado2;
-             var distancia;
-             var raiz;
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular Baricentro</h2>
 
-             xa = parseFloat(window.prompt("Informe a distância que o 1 ponto percorre no eixo X(Xa): ", ""));
-             xb = parseFloat(window.prompt("Informe a distância que o 2 ponto percorre no eixo X(Xb): ", ""));
-             px = (xb - xa);
-             quadrado1 = Math.pow(px,2);
-             ya = parseFloat(window.prompt("Informe a distância que o 1 ponto percorre no eixo Y(Ya): ", ""));
-             yb = parseFloat(window.prompt("Informe a distância que o 2 ponto percorre no eixo Y(Yb): ", ""));
-             py = (yb - ya);
-             quadrado2 = Math.pow(py,2);
-             distancia = (quadrado1 + quadrado2);
-             raiz = Math.sqrt(distancia);
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="altura">Informe a distância que o 1º ponto percorre no eixo X(Xa)</label>
+        <input class="input_calculadora" type="text" id="xa">
+        
+        <label for="base">Informe a distância que o 2º ponto percorre no eixo X(Xb)</label>
+        <input class="input_calculadora" type="text" id="xb"><br><br>
 
-             alert("A distância entre esses dois pontos é:  " + raiz);
-      </script>
+        <label for="altura">Informe a distância que o 1º ponto percorre no eixo Y(Ya)</label>
+        <input class="input_calculadora" type="text" id="ya">
+        
+        <label for="base">Informe a distância que o 2º ponto percorre no eixo Y(Yb)</label>
+        <input class="input_calculadora" type="text" id="yb">
+
+        <input type="button" value="Calcular" onclick="calcularDistDoisPontos();">
+
+        <math style="font-family: sans-serif;">
+            Baricentro = &nbsp
+            <mrow>
+              <msqrt><mn>(Ponto Xa + Ponto Xb)² + (Ponto Ya + Ponto Yb)²</mn></msqrt>
+            </mrow>
+        </math>
+    </div>
+</div>
+<script language="javascript">
+function calcularDistDoisPontos(){
+
+    var xa, xb, ya, yb;
+    var px, py;
+    var quadrado1,  quadrado2;
+    var distancia;
+    var raiz;
+
+    xa = document.getElementById('xa').value;
+    xb = document.getElementById('xb').value;
+    px = parseFloat(xb) - parseFloat(xa);
+    quadradox = Math.pow(px,2);
+    
+    ya = document.getElementById('ya').value;
+    yb = document.getElementById('yb').value;
+    py = parseFloat(yb) + parseFloat(ya);
+    quadradoy = Math.pow(py,2);
+
+    distancia = (parseFloat(quadradox) + parseFloat(quadradoy));
+    raiz = Math.sqrt(distancia);
+
+    document.getElementById('resultado').innerHTML = raiz;
+}
+</script>
       </body>
  </html>
    

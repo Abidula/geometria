@@ -4,15 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Retâgulo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var bret, alret, area;
-             
-             bret = parseFloat(window.prompt("Informe a base do Retângulo: ", ""));
-             alret = parseFloat(window.prompt("Informe a altura do Retângulo: ", ""));
-             area = bret * alret ;
-             alert("Área do Retângulo é:  " + area);
-      </script>
-      </body>
- </html>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular área do retângulo</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="base">Insira a altura do retângulo</label>
+        <input class="input_calculadora" type="text" id="altura">
+        
+        <label for="altura">Insira a base do retângulo</label>
+        <input class="input_calculadora" type="text" id="base">
+        
+        <input type="button" value="Calcular" onclick="calcularRetangulo();">
+
+        <math style="font-family: sans-serif;">
+            area do retângulo = &nbsp
+            <mrow>
+              <mn>base x altura</mn>
+            </mrow>
+          </mfrac>
+        </math>
+    </div>
+</div>
+<script language="javascript">
+
+    function calcularRetangulo(){
+        var base, altura,area; 
+        
+        base = document.getElementById('base').value;
+        altura = document.getElementById('altura').value;
+        area = (base * altura);
+        
+        document.getElementById('resultado').innerHTML = area;
+    }
+</script>
+</body>
+</html>

@@ -4,14 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Losango</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">    
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var dmaio, dmeno, area;
-             dmaio = parseFloat(window.prompt("Informe a diagonal maior do Losango: ", ""));
-             dmeno = parseFloat(window.prompt("Informe a diagonal menor do Losango: ", ""));
-             area = dmaio * dmeno / 2;
-             alert("Área do losango é: " + area);
-      </script>
-      </body>
- </html>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular área do triângulo</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="altura">Insira a diagonal maior</label>
+        <input class="input_calculadora" type="text" id="maior">
+        
+        <label for="base">Insira a diagonal menor</label>
+        <input class="input_calculadora" type="text" id="menor">
+        
+        <input type="button" value="Calcular" onclick="calcularLosango();">
+
+        <math style="font-family: sans-serif;">
+            area do losango = &nbsp
+          <mfrac>
+            <mrow>
+              <mn>diagonal maior x diagonal menor</mn>
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+        </math>
+    </div>
+</div>
+<script language="javascript">
+
+    function calcularLosango(){
+        var maior, menor,area; 
+        
+        maior = document.getElementById('maior').value;
+        menor = document.getElementById('menor').value;
+        area = (maior * menor) / 2;
+        
+        document.getElementById('resultado').innerHTML = area;
+    }
+</script>
+</body>
+</html>

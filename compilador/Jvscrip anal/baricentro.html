@@ -4,22 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto Médio</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">    
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var xa, xb, xc, ya, yb, yc;
-             var px, py;
-             
-             xa = parseFloat(window.prompt("Informe a distância que o 1 ponto percorre no eixo X(Xa): ", ""));
-             xb = parseFloat(window.prompt("Informe a distância que o 2 ponto percorre no eixo X(Xb): ", ""));
-             xc = parseFloat(window.prompt("Informe a distância que o 3 ponto percorre no eixo X(Xc): ", ""));
-             px = (xa + xb + xc)/3;
-             ya = parseFloat(window.prompt("Informe a distância que o 1 ponto percorre no eixo Y(Ya): ", ""));
-             yb = parseFloat(window.prompt("Informe a distância que o 2 ponto percorre no eixo Y(Yb): ", ""));
-             yc = parseFloat(window.prompt("Informe a distância que o 3 ponto percorre no eixo Y(Yc): ", ""));
-             py = (ya + yb + yc)/3;
-             alert("O ponto médio é:  (" + px + " , " + py + ")");
-      </script>
-      </body>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular Baricentro</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="altura">Informe a distância que o 1º ponto percorre no eixo X(Xa)</label>
+        <input class="input_calculadora" type="text" id="xa">
+        
+        <label for="base">Informe a distância que o 2º ponto percorre no eixo X(Xb)</label>
+        <input class="input_calculadora" type="text" id="xb">
+        
+        <label for="base">Informe a distância que o 3º ponto percorre no eixo X(Xc)</label>
+        <input class="input_calculadora" type="text" id="xc"><br><br>
+
+        <label for="altura">Informe a distância que o 1º ponto percorre no eixo Y(Ya)</label>
+        <input class="input_calculadora" type="text" id="ya">
+        
+        <label for="base">Informe a distância que o 2º ponto percorre no eixo Y(Yb)</label>
+        <input class="input_calculadora" type="text" id="yb">
+        
+        <label for="base">Informe a distância que o 3º ponto percorre no eixo Y(Yc)</label>
+        <input class="input_calculadora" type="text" id="yc">
+
+
+
+        <input type="button" value="Calcular" onclick="calcularBaricentro();">
+
+        <math style="font-family: sans-serif;">
+            Baricentro = &nbsp
+          <mfrac>
+            <mrow>
+              <mn>(Ponto 1 + Ponto 2 + Ponto 3)</mn>
+            </mrow>
+            <mn>3</mn>
+          </mfrac>
+        </math>
+    </div>
+</div>
+<script language="javascript">
+
+function calcularBaricentro(){
+    var xa, xb, xc, ya, yb, yc;
+    var px, py;
+
+    xa = document.getElementById('xa').value;
+    xb = document.getElementById('xb').value;
+    xc = document.getElementById('xc').value;
+    px = (parseFloat(xa) + parseFloat(xb) + parseFloat(xc)) / 3;
+    
+    ya = document.getElementById('ya').value;
+    yb = document.getElementById('yb').value;
+    yc = document.getElementById('yc').value;
+    py = (parseFloat(ya) + parseFloat(yb) + parseFloat(yc)) / 3;
+    
+    document.getElementById('resultado').innerHTML = "Ponto X: " + px + "<br>Ponto Y: " + py;
+}    
+
+</script>
+</body>
  </html>
    
