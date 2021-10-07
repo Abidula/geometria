@@ -33,7 +33,7 @@
         <math style="font-family: sans-serif;">
             Baricentro = &nbsp
             <mrow>
-              <msqrt><mn>(Ponto Xa + Ponto Xb)² + (Ponto Ya + Ponto Yb)²</mn></msqrt>
+              <msqrt><mn>(Ponto Xa - Ponto Xb)² + (Ponto Ya - Ponto Yb)²</mn></msqrt>
             </mrow>
         </math>
     </div>
@@ -50,20 +50,18 @@ function calcularDistDoisPontos(){
     xa = document.getElementById('xa').value;
     xb = document.getElementById('xb').value;
     px = parseFloat(xb) - parseFloat(xa);
-    quadradox = Math.pow(px,2);
+    quadradox = Math.pow(px, 2);
     
     ya = document.getElementById('ya').value;
     yb = document.getElementById('yb').value;
-    py = parseFloat(yb) + parseFloat(ya);
-    quadradoy = Math.pow(py,2);
+    py = parseFloat(yb) - parseFloat(ya);
+    quadradoy = Math.pow(py, 2);
 
-    distancia = (parseFloat(quadradox) + parseFloat(quadradoy));
+    distancia = (quadradox + quadradoy);
     raiz = Math.sqrt(distancia);
 
     document.getElementById('resultado').innerHTML = raiz;
 }
 </script>
-      </body>
- </html>
-   
-   
+</body>
+</html>

@@ -4,20 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto Médio</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">    
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var xa, xb, ya, yb;
-             var px, py;
-             
-             xa = parseFloat(window.prompt("Informe a distância que o 1 ponto percorre no eixo X(Xa): ", ""));
-             xb = parseFloat(window.prompt("Informe a distância que o 2 ponto percorre no eixo X(Xb): ", ""));
-             px = (xa + xb)/2;
-             ya = parseFloat(window.prompt("Informe a distância que o 1 ponto percorre no eixo Y(Ya): ", ""));
-             yb = parseFloat(window.prompt("Informe a distância que o 2 ponto percorre no eixo Y(Yb): ", ""));
-             py = (ya + yb)/2;
-             alert("O ponto médio é:  (" + px + "," + py + ")");
-      </script>
-      </body>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular Baricentro</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="altura">Informe a distância que o 1º ponto percorre no eixo X(Xa)</label>
+        <input class="input_calculadora" type="text" id="xa">
+        
+        <label for="base">Informe a distância que o 2º ponto percorre no eixo X(Xb)</label>
+        <input class="input_calculadora" type="text" id="xb"><br><br>
+
+        <label for="altura">Informe a distância que o 1º ponto percorre no eixo Y(Ya)</label>
+        <input class="input_calculadora" type="text" id="ya">
+        
+        <label for="base">Informe a distância que o 2º ponto percorre no eixo Y(Yb)</label>
+        <input class="input_calculadora" type="text" id="yb">
+        
+        <input type="button" value="Calcular" onclick="calcularPontoMedio();">
+
+        <math style="font-family: sans-serif;">
+            Ponto Medio = &nbsp
+          <mfrac>
+            <mrow>
+              <mn>Ponto 1 + Ponto 2</mn>
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+        </math>
+    </div>
+</div>
+<script language="javascript">
+
+function calcularPontoMedio(){
+    var xa, xb, ya, yb;
+    var px, py;
+
+    xa = document.getElementById('xa').value;
+    xb = document.getElementById('xb').value;
+    px = (parseFloat(xa) + parseFloat(xb)) / 2;
+    
+    ya = document.getElementById('ya').value;
+    yb = document.getElementById('yb').value;
+    py = (parseFloat(ya) + parseFloat(yb)) / 2;
+    
+    document.getElementById('resultado').innerHTML = "Ponto X: " + px + "<br>Ponto Y: " + py;
+}    
+
+</script>
+</body>
  </html>
    

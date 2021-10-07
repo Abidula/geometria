@@ -3,19 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N-énessimo Termo</title>
+    <title>Enésimo Termo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
-      <body size="30" color="black">
-      <script language="javascript">
-             var priter,positer, raz; 
-             var an;
-             
-             priter = parseFloat(window.prompt("Informe o Primeiro Termo: ", ""));
-             positer = parseFloat(window.prompt("Informe a Posição do Termo na Sequência: ", ""));
-             raz = parseFloat(window.prompt("Informe a Razão: ", ""));
-             an = priter + (positer - 1) * raz;
-             alert("A" + positer +" Termo da Sequência é:  " + an);
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular área do circulo</h2>
 
-      </script>
-      </body>
- </html>
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="lado">Insira o Primeiro termo</label>
+        <input class="input_calculadora" type="text" id="primeirotermo">
+
+        <label for="lado">Insira a Posição Desejada:</label>
+        <input class="input_calculadora" type="text" id="posicaosequencia">
+
+        <label for="lado">Insira a Razão</label>
+        <input class="input_calculadora" type="text" id="razao">
+
+        <input type="button" value="Calcular" onclick="calcularNesimo();">
+        
+        <math style="font-family: sans-serif;">
+            Enésimo = &nbsp
+            <mrow>
+              <mn>Primeiro Termo + (Primeiro Termo - 1) x Razão</mn>
+            </mrow>
+        </math>        
+    </div>
+</div>
+<script language="javascript">
+function calcularNesimo(){
+    var primeirotermo, posicaosequencia, razao, posicaodesejada; 
+
+    primeirotermo = document.getElementById('primeirotermo').value;
+    posicaosequencia = document.getElementById('posicaosequencia').value;
+    razao = document.getElementById('razao').value;
+    posicaodesejada = parseFloat(primeirotermo) + (parseFloat(posicaosequencia) - 1) * parseFloat(razao);
+
+    document.getElementById('resultado').innerHTML = posicaodesejada;
+}    
+
+</script>
+</body>
+</html>
