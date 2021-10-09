@@ -80,7 +80,7 @@
   background-color: #fff;
   display: none;
   position: absolute;
-  height: 3900px;
+  height: auto;
   width: 1000px;
   left: 0; 
   border-radius:0;
@@ -269,6 +269,22 @@
   visibility: visible;
   opacity: 1;
 }
+ul.listagem{
+  list-style-type: disc;
+}
+p.justify{
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 30px;
+}
+p.center{
+  text-align: center;
+}
+img.center_img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 </style>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compartible" content="IE=edge">
@@ -323,94 +339,844 @@
           <label for="tab1" class="tab_label">Geometria Plana</label>
           <div class="tab-content">
             <article>
-<p align="justify"> A geometria plana ou euclidiana é a parte da matemática que estuda as figuras que não possuem volume. A geometria plana também é chamada de euclidiana, uma vez que seu nome representa uma homenagem ao geômetra Euclides de Alexandria, considerado o “pai da geometria”.
-<p align="justify">Curioso notar que o termo geometria é a união das palavras “geo” (terra) e “metria” (medida); assim, a palavra geometria significa a "medida de terra".<br><br>
-<h4>Conceitos de Geometria Plana</h4><br>
-<p align="justify">Alguns conceitos são de suma importância para o entendimento da geometria plana, a saber:<br><br>
-<h4>Ponto</h4>
-<p align="justify">Conceito adimensional, uma vez que não possui dimensão. Os pontos determinam uma localização e são indicados com letras maiúsculas.<br><br>
-<h4>Reta</h4>
-<p align="justify">A reta, representada por letra minúscula, é uma linha ilimitada unidimensional (possui o comprimento como dimensão) e pode se apresentar em três posições:<br><br>
-*horizontal<br>
-*vertical<br>
-*inclinada<br><br>
-<p align="justify">Dependendo da posição das retas, quando elas se cruzam, ou seja, possuem um ponto em comum, são chamadas de retas concorrentes.
-Por outro lado, as que não possuem ponto em comum, são classificadas como retas paralelas.<br><br>
-<h4>Segmento de Reta</h4>
-<p align="justify">Diferente da reta, o segmento de reta é limitado pois corresponde a parte entre dois pontos distintos.
-A semirreta é limitada somente num sentido, visto que possui início e não possui fim.<br><br>
-<h4>Plano</h4>
-<p align="justify">Corresponde a uma superfície plana bidimensional, ou seja, possui duas dimensões: comprimento e largura. Nessa superfície que se formam as figuras geométricas.<br><br>
-<h4>Ângulos</h4> 
-<p align="justify">Os ângulos são formados pela união de dois segmentos de reta, a partir de um ponto comum, chamado de vértice do ângulo. São classificados em:<br><br>
-*Ângulo reto (Â = 90º)<br>
-*Ângulo agudo (0º<br>
-*Ângulo obtuso (90º<br><br>
-<h4>Área</h4><br>
-<p align="justify">A área de uma figura geométrica expressa o tamanho de uma superfície. Assim, quanto maior a superfície da figura, maior será sua área.<br><br>
-<h4>Perímetro</h4><br>
-O perímetro corresponde a soma de todos os lados de uma figura geométrica.<br><br>
-<h4>Figuras da Geometria Plana</h4><br>
- <div class="zoom">
-   <center><img src="../img/img_plana/GP1.jpg" class="img-responsive"></center>
-  </div>
-<p align="justify">Polígono (figura plana fechada) de três lados, o triângulo é uma figura geométrica plana formada por três segmentos de reta.
-Segundo a forma dos triângulos, eles são classificados em:<br><br>
-<b>*triângulo equilátero:</b> possui todos os lados e ângulos internos iguais (60°);<br>
-<b>*triângulo isósceles:</b> possui dois lados e dois ângulos internos congruentes;<br>
-<b>*triângulo escaleno:</b> possui todos os lados e ângulos internos diferentes.<br><br>
-No tocante aos ângulos que formam os triângulos, eles são classificados em:<br><br>
-<b>*triângulo retângulo:</b> possui um ângulo interno de 90°;<br>
-<p align="justify"><b>*triângulo obtusângulo:</b> possui dois ângulos agudos internos, ou seja, menor que 90°, e um ângulo obtuso interno, maior que 90°;<br>
-<b>*triângulo acutângulo:</b> possui três ângulos internos menores que 90°.<br><br>
-<b>*Área do Triângulo:</b> (BASE x ALTURA)/2 ou (B x H)/2<br><br>
-<h4>Quadrado</h4>
- <div class="zoom">
-    <center><img src="../img/img_plana/GP2.jpg" class="img-responsive"></center>
-  </div>
-<p align="justify">Polígono de quatro lados iguais, o quadrado ou quadrilátero é uma figura geométrica plana que possuem os quatro ângulos congruentes: retos (90°).<br><br>
-<b>*Perímetro do Quadrado:</b> 4 x LADO (4 x L)<br>
-<b>*Área do Quadrado:</b> LADO x LADO (L x L)<br><br>
-<h4>Retângulo</h4>
-<div class="zoom">
-    <center><img src="../img/img_plana/GP3.jpg" class="img-responsive"></center>
-</div>
-<p align="justify">Figura geométrica plana marcada por dois lados paralelos no sentido vertical e os outros dois paralelos, no horizontal. Assim, todos os lados do retângulo formam ângulos reto (90°).<br><br>
-<b>*Área do Retângulo:</b> BASE x ALTURA (B x H)<br>
-<b>*Perímetro do Retângulo:</b> 2(B + H) ou (2B + 2H)<br><br>
-<h4>Círculo</h4><br>
-<div class="zoom">
-    <center><img src="../img/img_plana/GP4.jpg" class="img-responsive"></center>
-</div>
-<p align="justify">Figura geométrica plana caracterizada pelo conjunto de todos os pontos de um plano. O raio (r) do círculo corresponde a medida da distância entre o centro da figura até sua extremidade.<br><br>
-<b>*Área do Círculo: πr^2 (PI x R, ao quadrado)</b><br>
-<b>*Perímetro do Círculo: 2πr (2 x PI x R)</b><br><br>
-<h4>Trapézio</h4>
-<div class="zoom">
- <center><img src="../img/img_plana/GP5.jpg" class="img-responsive"></center>
-</div>
-<p align="justify">Chamado de quadrilátero notável, pois a soma dos seus ângulos internos corresponde a 360º, o trapézio é uma figura geométrica plana.
-<p align="justify">Ele possui dois lados e bases paralelas, donde uma é maior e outra menor. São classificados em:<br><br>
-<b>*trapézio retângulo:</b> possui dois ângulos de 90º;<br>
-<b>*trapézio isósceles ou simétrico:</b> os lados não paralelos possuem a mesma medida;<br>
-<b>*trapézio escaleno:</b> todos os lados de medidas diferentes.<br><br>
-<b>*Área do Trapézio:</b>  ((BASE MAIOR + BASE MENOR) x ALTURA))/2 ou ((B + b) x H)/2<br><br>
-<h4>Losango</h4><br>
-<div class="zoom">
- <center><img src="../img/img_plana/GP6.jpg" class="img-responsive"></center>
-</div>
-<p align="justify">Quadrilátero equilátero, ou seja, formado por quatro lados iguais, o losango, junto com o quadrado e o retângulo, é considerado um paralelogramo.
-<p align="justify">Ou seja, é um polígono de quatro lados os quais possuem lados e ângulos opostos congruentes e paralelos.<br><br>
-<b>*Área do Losango:</b> (DIAGONAL MANIOR x DIAGONAL MENOR)/2 ou (D x d)/2<br>
-<b>*Área do Paralelogramo:</b>  BASE x ALTURA (B x H)<br><br><br><br><br><br>
-     <nav class="link">
-       <ul>
-          <li><a href="https://www.todamateria.com.br/geometria-plana/" target="blank">Referência: Conceitos, Gráficos e Fórmulas</a><br>
-           <a href="https://www.todamateria.com.br/retangulo/" target="blank">Referência: Imagens e Retângulo</a><br>
-           <a href="https://www.infoescola.com/geometria-plana/trapezio/" target="blank">Referência: Imagens e Trapézio</a><br>
-        </li>
-        </ul>
-     </p>
+            <h3>Introdução</h3>
+            <p class="justify">
+              Nosso objetivo ao longo desse material é encontrar fórmulas que expres-
+              sem as áreas de algumas figuras planas através de suas dimensões. Para
+              tanto, nosso ponto de partida é um quadrado unitário: por definição,
+              dizemos que a área de um quadrado de lado 1cm é igual a 1cm². (lê-se:
+              um centı́metro quadrado).
+            </p>                
+            <img class="center_img" src="../img/geoPlana/1.png">
+            <p class="justify">
+              No restante desse material, utilizamos a definição acima para deduzir
+              fórmulas para as áreas de alguns polı́gonos convexos.<br><br>
+              Considere, por exemplo, um retângulo cujos lados medem 2cm e 3cm.
+              A partir de um dos vértices do retângulo, podemos traçar, a cada
+              centı́metro, segmentos de retas perpendiculares aos lados, de modo que
+              o retângulo fique dividido em 2 x 3 = 6 quadrados de lado 1cm (veja a
+              figura abaixo). Desse modo, a área do retângulo é igual a 2 x 3 = 6cm².
+
+
+            </p>
+            <img class="center_img" src="../img/geoPlana/2.png">
+            <p class="justify">
+              O argumento utilizado para calcular a área do retângulo acima pode ser
+              facilmente estendido para calcular a área de qualquer retângulo cujos
+              lados tenham, por medidas, quantidades inteiras de centı́metros: se os
+              lados de um retângulo medem m e n centı́metros, com m e n inteiros,
+              então a sua área é igual a m x n cm². De fato, argumentando como no
+              exemplo acima, podemos facilmente particionar o retângulo em m x n
+              quadrados unitários.
+            </p>                
+            <p class="justify">
+              Calculemos, agora, a área do quadrado desenhado na figura a seguir,
+              cujo lado mede
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>8</mn>
+                  </mrow>
+                  <mn>3</mn>
+                </mfrac>
+              </math>
+              cm. Veja que podemos dividir o quadrado unitário (pintado de amarelho) em 9 quadradinhos menores de lado
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>3</mn>
+                </mfrac>
+              </math>
+              Sendo assim, a área de cada um desses quadradinhos menores deve ser igual
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>9</mn>
+                </mfrac>
+              </math>
+              = (
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>3</mn>
+                </mfrac>
+              </math>)²
+              cm². Por outro lado, traçando retas perpendiculares aos lados, podemos dividir o quadrado de lado
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>8</mn>
+                  </mrow>
+                  <mn>3</mn>
+                </mfrac>
+              </math>           
+              em 64 quadradinhos de lado   
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>3</mn>
+                </mfrac>
+              </math>
+              Portanto, concluı́mos que a área do quadrado de lado         
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>8</mn>
+                  </mrow>
+                  <mn>3</mn>
+                </mfrac>
+              </math>    
+              cm deve ser igual (em cm2 ) a
+            </p>
+            <p class="justify center">
+              64 x 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>9</mn>
+                </mfrac>
+              </math>    
+              =
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>64</mn>
+                  </mrow>
+                  <mn>9</mn>
+                </mfrac>
+              </math>   
+              = (
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>8</mn>
+                  </mrow>
+                  <mn>3</mn>
+                </mfrac>
+              </math>)².                    
+            </p>
+            <img class="center_img" src="../img/geoPlana/3.png">            
+            <p class="justify">
+              Adaptando o argumento acima ao caso de retângulos, podemos mostrar
+              sem dificuldade que a área de qualquer retângulo cujos lados têm medidas
+              em centı́metros dadas pelos números racionais
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>m</mn>
+                  </mrow>
+                  <mn>n</mn>
+                </mfrac>
+              </math>  
+              e 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>p</mn>
+                  </mrow>
+                  <mn>q</mn>
+                </mfrac>
+              </math>
+              é igual (em cm²)                              
+            </p> 
+            <p class="justify center">
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>m</mn>
+                  </mrow>
+                  <mn>n</mn>
+                </mfrac>
+              </math>  
+              x 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>p</mn>
+                  </mrow>
+                  <mn>q</mn>
+                </mfrac>
+              </math>
+            </p>                
+
+            <p class="justify">
+              Em retângulos cujos lados possuem medidas irracionais (em cm), a
+              ideia é aproximar (tanto quanto se queira) esses números irracionais
+              por números racionais e concluir que, ainda neste caso, temos que a área
+              é dada (em cm²) pelo produto das medidas dos lados. Dessa forma,
+              concluı́mos que:
+            </p>
+            <p class="justify center">
+              A área de um retângulo de lados a e b é igual a ab.
+            </p>                
+            <img class="center_img" src="../img/geoPlana/4.png">            
+            <p class="justify">
+              Como caso particular da fórmula acima (fazendo a = b = l) temos que:
+            </p>
+            <p class="justify center">
+              A área de um quadrado de lado l é igual a l² .
+            </p>   
+            <p class="justify">
+              É importante observar que as fórmulas deduzidas acima, para a área
+              de um quadrado e um retângulo, permanecem válidas independentemente
+              da unidade de comprimento utilizada para medir seus lados. Por
+              exemplo, se chamarmos de unitário um quadrado de lado igual a 1m, e
+              dissermos que sua área é igual a 1m² (lê-se: metro quadrado), então a
+              área de um quadrado de lado (em m) igual a l será (em m²) igual a l² ,
+              ao passo que a área de um retângulo de lados (em m) iguais a a e b será
+              (em m²) igual a ab.
+
+            </p> 
+            <img class="center_img" src="../img/geoPlana/5.png">
+            <p class="justify">
+              Nesse sentido, o único ponto relevante é como expressar em cm² uma
+              área dada em m², ou vice-versa. Para fazer isso, basta observar que,
+              tomando um quadrado de lado igual a 1m e dividindo cada lado em 100
+              partes iguais, particionamos o quadrado em 100² quadrados de lados
+              iguais a 1cm cada. Então, calculando áreas, concluı́mos que
+            </p>                
+
+            <p class="justify center">
+              1m² = 100²cm².
+            </p>
+            <p class="justify">
+              Calcularemos, agora, a área do paralelogramo ABCD, de base b e altura
+              h, desenhado na figura abaixo:
+            </p>                
+            <img class="center_img" src="../img/geoPlana/6.png">            
+            <p class="justify">
+              Consideremos (veja a parte de baixo da figura) a reta perpendicular
+              ao lado CD passando por C e sua interseção E com o prolongamento
+              do lado AB; como AB e CD são paralelos, AE e CE também são
+              perpendiculares. Além disso, denotemos por H o pé da perpendicular
+              ao lado AB passando pelo ponto D.<br>
+              Afirmamos que os triâgulos AHD e BEC são congruentes. De fato,
+              como DCEH é um retângulo, temos
+            </p>
+            <p class="justify center">
+              AB = CD = EH e, daı́,<br>
+              AH = AB − HB<br>
+              = HE − HB<br>
+              = BE;
+            </p>
+            <p class="justify">
+              também, AD = BC, pois são lados opostos de um paralegramo, e AHD = BEC
+              = 90°. A congruência decorre, portanto, pelo caso especial CH, de 
+              congruência de triângulos retângulos.<br>
+              Assim, escrevendo A(F) para denotar a área de uma figura F, concluı́mos 
+              que A(AHD) = A(BEC), de forma que
+            </p> 
+            <p class="justify center">
+              A(ABCD) = A(AHD) + A(HBCD)<br>
+              = A(BEC) + A(HBCD)<br>
+              = A(HECD)<br>
+              = HE x h<br>
+              = AB x h<br>
+              = bh.
+            </p>                
+            <p class="justify">
+              Em resumo,
+
+            </p>
+            <p class="justify center">
+              A área de um paralelogramo de base b e altura h é bh.
+            </p>                
+            <p class="justify">
+              Passamos, agora, ao cálculo da área de um triângulo ABC de base
+              AB = b e altura h, mostrado em verde na figura abaixo.
+            </p>
+            <img class="center_img" src="../img/geoPlana/7.png">                        
+            <p class="justify">
+              Considere o ponto D tal que ABDC é um paralelogramo. Então, a base
+              de tal paralelogramo mede b e sua altura mede h, de sorte que sua área
+              é igual a bh.<br>
+              Mas, observe que os triângulos ABC e DCB são congruentes pelo caso
+              LLL, pois AB = DC e AC = DB (por serem pares de lados opostos de
+              um paralelogramo) e o lado BC é comum a ambos. Portanto, temos:
+            </p>   
+            <p class="justify center">
+              A(ABDC) = A(ABC) + A(DCB) = 2A(ABC)
+            </p> 
+            <p class="justify">
+              e, daı́,
+            </p>                
+            <p class="justify center">
+              A(ABC) =
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>
+              A(ABDC) =
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>bh.              
+            </p>
+            <p class="justify">
+              Em resumo, concluı́mos que
+            </p>                
+            <p class="justify center">
+              A área de um triângulo de base b e altura h é
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>bh.             
+            </p>
+            <h3>Área de losangos</h3>
+            <p class="justify">
+              Como aplicação da fórmula para a área de triângulos, examinemos o
+              caso dos losangos. Observando o losango na figura abaixo, vemos que
+              suas diagonais o dividem em quatro triângulos retângulos congruentes.
+              De fato, como diagonais se intersectam ao meio e os lados do losango
+              têm todos a mesma medida, a congruência entre os quatro triângulos
+              segue do caso LLL; logo, todos os ângulos no ponto de interseção das
+              diagonais são retos.
+            </p>
+            <img class="center_img" src="../img/geoPlana/8.png">            
+            <p class="justify">
+              Se denotarmos as medidas das diagonais do losango por 
+              <math>
+                <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>1</mn>
+                    </msub>
+                </mrow>
+              </math>
+              <math>
+                <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>2</mn>
+                    </msub>
+                </mrow>
+              </math>
+              um desses triângulos retângulos tem catetos de medidas
+              <math>
+                <mfrac>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>1</mn>
+                    </msub>                    
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>            
+              e   
+              <math>
+                <mfrac>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>2</mn>
+                    </msub>                    
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>.
+              Como a área de um triângulo retângulo de catetos b e c é dada por       
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>
+              bv, temos que                          
+            </p>                
+            <p class="justify center">
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>
+              x 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>1</mn>
+                    </msub>                    
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>      
+              x 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>2</mn>
+                    </msub>                    
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>
+              =
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>8</mn>
+                </mfrac>
+              </math>  
+              <math>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>1</mn>
+                    </msub>                    
+                  </mrow>
+              </math>            
+              <math>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>2</mn>
+                    </msub>                    
+                  </mrow>
+              </math>.                                                
+            </p>
+            <p class="justify">
+              Por fim, somando as áreas dos quatro triângulos, segue que o losango
+              tem área igual a
+            </p>                
+
+            <p class="justify center">
+              4 x
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>8</mn>
+                </mfrac>
+              </math>  
+              <math>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>1</mn>
+                    </msub>                    
+                  </mrow>
+              </math>            
+              <math>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>2</mn>
+                    </msub>                    
+                  </mrow>
+              </math>                    
+              =
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>  
+              <math>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>1</mn>
+                    </msub>                    
+                  </mrow>
+              </math>            
+              <math>
+                  <mrow>
+                    <msub>
+                      <mi>d</mi>
+                      <mn>2</mn>
+                    </msub>                    
+                  </mrow>
+              </math>.      
+            </p>
+            <h3>Área de trapézios</h3>
+            <p class="justify">
+              Já em relação ao trapézio da próxima figura, cujas bases paralelas medem
+              B e b e cuja altura mede h, traçando uma de suas diagonais o dividimos
+              em dois triângulos, um de base B e altura h e outro de base b e altura
+              h.
+            </p>
+            <img class="center_img" src="../img/geoPlana/9.png">                        
+            <p class="justify">
+              Portanto, a área do trapézio é dada por
+            </p>                
+            <p class="justify center">
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>B x h</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math> 
+              +
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>b x h</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>  
+              =
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>Bh + bh </mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>                            
+              =
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>(B + b) x h</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>                 
+            </p>
+            <p class="justify">
+              Agora, apresentaremos uma fórmula para o cálculo da área de polı́gonos
+              regulares em função do apótema e do perı́metro do polı́gono. Inicialmente, 
+              considere o triângulo equilátero ABC de lado l e apótema
+              <math>
+                <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>3</mn>
+                    </msub>
+                </mrow>
+              </math>
+              , inscrito em um cı́rculo de centro O e raio R (veja a figura abaixo).
+            </p>                
+            <img class="center_img" src="../img/geoPlana/10.png">
+            <p class="justify">
+              Como a figura sugere, podemos dividir o triângulo em três triângulos
+              congruentes, OAB, OAC e OBC, todos com área igual a
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>      
+              l x          
+              <math>
+                <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>3</mn>
+                    </msub>
+                </mrow>
+              </math>
+              Então, a área do triângulo equilátero ABC pode ser calculada por
+            </p>
+            <p class="justify center">
+              A(ABC) = 3 x 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>l x &nbsp;
+                    <msub>
+                      <mi>a</mi>
+                      <mn>3</mn>
+                    </msub>
+                    </mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math><br>
+              = 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>3 x l x &nbsp;
+                    <msub>
+                      <mi>a</mi>
+                      <mn>3</mn>
+                    </msub>
+                    </mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math><br>
+              = 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <mn>3 x  
+                    <msub>
+                      <mi>p</mi>
+                      <mn>3</mn>
+                    </msub>
+                     x &nbsp;
+                    <msub>
+                      <mi>a</mi>
+                      <mn>3</mn>
+                    </msub>
+                    </mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math><br>
+              =
+              <math>&nbsp;
+                <mfrac>
+                  <mrow>
+                    <mn>
+                    <msub>
+                      <mi>p</mi>
+                      <mn>3</mn>
+                    </msub>
+                     x &nbsp;
+                    <msub>
+                      <mi>a</mi>
+                      <mn>3</mn>
+                    </msub>
+                    </mn>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>                                      
+            </p>
+            <p class="justify">
+              em que p3 é o semiperı́metro do triângulo ABC.<br>
+              Para expressarmos a área de ABC de outra maneira útil, comece observando que ABO
+               b = 30°. Então,
+            </p>                
+
+            <p class="justify center">
+
+              <math style="font-family: serif;">
+                <mfrac>
+                  <mrow>
+                    <math>
+                      <mfrac>
+                        <mrow>
+                          <msub>
+                            <mi>a</mi>
+                            <mn>3</mn>
+                          </msub>
+                          </mn>
+                        </mrow>
+                        l
+                      </mfrac>
+                    </math>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+              </math>              
+              ⇒ 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <msqrt>
+                      <mn>3</mn>
+                    </msqrt>
+                    </mn>
+                  </mrow>
+                  3
+                </mfrac>
+              </math>  
+              = 
+              <math>
+                <mfrac>
+                  <mrow>
+                    <msub>
+                      <mi>2a</mi>
+                      <mn>3</mn>
+                    </msub>
+                    </mn>
+                  </mrow>
+                  l
+                </mfrac>
+              </math>       
+              ⇒            
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>      
+           <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                
+
+            <p class="justify">
+
+            </p>
+            <p class="justify">
+
+            </p>                                                                  
             </article>
           </div>
         </li>

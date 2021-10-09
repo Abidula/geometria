@@ -4,17 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razão</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
-      <body size="30" color="black">
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Calcular a razão da progressão aritmética</h2>
+
+        <div class="visor">
+            <span >=</span>
+            <span id="resultado"></span>
+        </div>
+        
+        <label for="lado">Insira o Primeiro termo</label>
+        <input class="input_calculadora" type="text" id="primeirotermo">
+
+        <label for="lado">Insira a Posição do Termo na Sequência</label>
+        <input class="input_calculadora" onchange="alterarAn();"  type="text" id="posicaosequencia">
+
+        <label for="lado">Insira o <math><msub><mi>A</mi><mn><span id="n">n</span></mn></msub></math> Termo na Sequência</label>
+        <input class="input_calculadora" type="text" id="an">
+        <input type="button" value="Calcular" onclick="calcularRazao();">
+        
+        <math style="font-family: sans-serif;">
+            Enésimo = &nbsp
+            <mrow>
+              <mn>Primeiro Termo + (Primeiro Termo - 1) x Razão</mn>
+            </mrow>
+        </math>        
+    </div>
+</div>
       <script language="javascript">
-             var priter,positer, raz; 
-             var an;
-             
-             positer = parseFloat(window.prompt("Informe a Posição do Termo na Sequência: ", ""));
-             an = parseFloat(window.prompt("Informe o A"+positer + " Termo da Sequência: ", ""));
-             priter = parseFloat(window.prompt("Informe o Primeiro Termo: ", ""));
-             raz = (an - priter)/(positer - 1);
-             alert("A razão dessa PA é:  " + raz);
+function calcularRazao() {
+    var primeirotermo, posicaosequencia, an, razao;
+
+    primeirotermo = document.getElementById('primeirotermo').value;
+    posicaosequencia = document.getElementById('posicaosequencia').value;
+    an = document.getElementById('an').value;
+
+    razao = (an - primeirotermo) / (posicaosequencia - 1);
+    document.getElementById('resultado').innerHTML = razao;
+
+}
+function alterarAn(){
+    var posicaosequencia;
+    posicaosequencia = document.getElementById('posicaosequencia').value;
+    document.getElementById('n').innerHTML = posicaosequencia;
+}
       </script>
       </body>
  </html>
