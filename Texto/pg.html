@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="57x57" href="../ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../ico/favicon-16x16.png">
+    <link rel="manifest" href="../ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+ <title>Progressão Geometrica</title>
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+ }
+ .link {
+  width: 100%;
+  height: 5px;
+  font-family: cursive;
+ }
+ .link ul {
+  list-style: none;
+  position: relative;
+ }
+ .link a {
+  background-color: #107E71;
+  border-radius: 10px;
+  padding: 3px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+ }
+.nav_tabs{
+    width: 1000px;
+    height: 1000px;
+    margin: 75px auto;
+    background-color: #fff;
+    position: relative;
+    border-radius: 30px;
+  }
+  .nav_tabs ul{
+    list-style: none;
+  }
+  .nav_tabs ul li{
+    float: left;
+  }
+  .tab_label{
+    display: block;
+    width: 200px;
+    background-color: #222;
+    padding: 25px;
+    font-size: 15px;
+    color:#fff;
+    cursor: pointer;
+    text-align: center;
+    font-family: fantasy;
+  }
+  .nav_tabs .rd_tab { 
+  display:none;
+  position: relative;
+}
+.nav_tabs .rd_tab:checked ~ label { 
+  color:#fff;}
+.tab-content{
+  border-top: solid 5px #32a041;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  height: auto;
+  width: 1000px;
+  left: 0; 
+  border-radius:0;
+}
+.rd_tab:checked ~ .tab-content{
+  display: block;
+}
+.tab-content h2{
+  padding: 10px;
+  color: #0E1810;
+  font-family: Cursive;
+}
+.tab-content article{
+  padding: 30px;
+  color: #0E1810;
+  font-family: Cursive;
+}
+ .menu {
+  width: 100%;
+  height: 60px;
+  background: #222;
+  font-family: fantasy;
+ }
+ .menu ul {
+  list-style: none;
+  position: relative;
+ }
+ .menu ul li {
+  width: 230px;
+  float: left;
+ }
+ .menu a {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+ }
+ .menu a:hover {
+  background-color: #32a041;
+  color: #555;
+ }
+ .menu ul ul {
+  position: absolute;
+  visibility: hidden;
+ }
+ .menu ul li:hover ul {
+  visibility: visible;
+  z-index: 4;
+ }
+ .menu ul ul li {
+  float: none;
+  /*border-bottom: solid 1px #ccc;*/
+  margin: 2px;
+ }
+ .menu ul ul li a {
+  background-color: #069; 
+ }
+ label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #222;
+  color: #fff;
+  font-family: "fantasy";
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: none;
+ }
+ label[for="tab1"]{
+  border-top-left-radius: 20px;
+ }
+  label[for="tab4"]{
+  border-top-right-radius: 20px;
+ }
+ #bt_menu {
+      display: none;
+ }
+    @media (max-width: 800px) {
+     label[for="bt_menu"] {
+     display: block;
+  }
+  #bt_menu:checked ~ .menu {
+      margin-left: 0;
+  }
+  .menu {
+      margin-top: 5px;
+      margin-left: -100%;
+      transition: all .4s;
+      text-decoration:none;
+  }
+  .menu ul li {
+      width: 100%;
+      float: none;
+  }
+  .menu ul ul {
+      position: static;
+      overflow: hidden;
+      max-height: 0;
+      transition: all .8s;
+  }
+  .menu ul li:hover ul {
+      height: auto;
+      max-height: 200px;
+  }
+ }
+ .zoom{
+  overflow: hidden;
+}
+.zoom img{
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.zoom:hover img{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*#scroolPath{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}*/
+#progressbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  background: #120a8f;
+  /*animation: animate 5s linear infinite;*/
+}
+/*@keyframes animate{
+  0%, 100%{
+    filter: hue-rotate(0deg);
+  }
+  50%{
+    filter: hue-rotate(360deg);
+  }
+}
+#progressbar:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(10px);
+}
+#progressbar:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(10px);
+}*/
+.scrollTop{
+  position: fixed;
+  bottom: 800px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #32a041/*091921*/ url(up.png);
+  border-radius: 50%;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 100000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.scrollTop.active{
+  bottom: 40px;
+  visibility: visible;
+  opacity: 1;
+}
+ul.listagem{
+  list-style-type: disc;
+}
+p.justify{
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 30px;
+}
+p.center{
+  text-align: center;
+}
+img.center_img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+</style>
+</style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compartible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body background="../img/fundo2.jpg">
+ <input type="checkbox" id="bt_menu">
+ <label for="bt_menu"> &#9776; </label>
+ <div class="scrollTop" onclick="scrollToTop()"></div>
+ <div id="progressbar"></div>
+ <div id="scrollPath"></div>
+ <nav class="menu">
+  <ul>
+     <li><a href="../index.html">Início</a></li>
+   <li><a href="#">Geometrias e Progressões</a>
+   <ul>
+      <li><a href="geometria_analitica.html">Analítica</a></li>
+      <li><a href="geometria_plana.html">Plana</a></li>
+      <li><a href="pa.html">Progressão Aritmética</a></li>
+      <li><a href="pg.html">Progressão Geometrica</a></li>
+   </ul>
+   </li>
+    <li><a href="#">Calculadora</a>
+   <ul>
+     <li><a href="../compilador/plana.html">Geometria Plana</a></li>
+     <li><a href="../compilador/anal.html">Geometria Analítica</a></li>
+     <li><a href="../compilador/PA.html">PA e PG</a></li>
+   </ul>
+   </li>
+        <li><a href="#">Vídeo Aulas</a>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=XAK7m6SRLPw&list=PLEfwqyY2ox86GfOHvSgN5iJZKNN_AUlU_" target="blank">Geometria Plana</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ZJ5Aqwcx9f4&list=PLEfwqyY2ox858XssXB_f-Jx42fgTb0Vsn" target="blank">Geometria Analítica</a></li>
+            <li><a href="https://www.youtube.com/watch?v=v_PQnBk-8Mc&list=PLEfwqyY2ox87GYPpLcP1kv2Nt9xu0oBTy" target="blank">Geometria Espacial</a></li>
+            <li><a href="https://www.youtube.com/watch?v=QE3GieQD-Ps&list=PLEfwqyY2ox85NtaWwua8KHQYEx5I7qe3E" target="blank">PA e PG</a></li>
+        </ul>
+        <li><a href="#">Contatos/Outros</a>
+          <ul>
+          <li><a href="https://www.facebook.com/geometria.aolado.1" target="blank">Facebook</a></li>
+          <li><a href="https://instagram.com/geometria_suporte?igshid=1gl7gsmw98cfa" target="blank">Instagram</a></li>
+          <li><a href="../desenvolvedores/desenvolver.html" target="blank">Desenvolvedores</a></li>
+          <li><a href="../outros/relogio.html" target="blank">Relógio</a></li>
+          <li><a href="../outros/corona.html" target="blank">Covid-19</a></li>
+        </li>
+        </ul>
+        </nav>
+       <nav class="nav_tabs">
+      <ul>
+        <li>
+          <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+          <label for="tab1" class="tab_label">Progressão Geometrica</label>
+          <div class="tab-content">
+            <article>
+              <h3>Definição. (Progressão geométrica)</h3>
+              <p class="justify">
+                Uma progressão geométrica é uma sequência na qual é constante o quociente
+                da divisão de cada termo pelo termo anterior. Esse quociente
+                constante é chamado de razão da progressão e é representado pela letra
+                q.
+              </p>
+              <h3>Exemplo 1</h3>
+              <p class="justify">
+                A sequência (2, 6, 18, 54, . . .) é uma progressão geométrica cuja razão
+                vale 3. De fato,
+              </p>                                                                                                                
+              <p class="justify center">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <mfrac>
+                    <mrow>
+                      <mn>a2</mn>
+                    </mrow>
+                    <mn>a1</mn>
+                  </mfrac>
+                </math>      
+                =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>6</mn>
+                    </mrow>
+                    <mn>2</mn>
+                  </mfrac>
+                </math><br>   
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a3</mn>
+                    </mrow>
+                    <mn>a2</mn>
+                  </mfrac>
+                </math>      
+                =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>18</mn>
+                    </mrow>
+                    <mn>6</mn>
+                  </mfrac>
+                </math><br>     
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a4</mn>
+                    </mrow>
+                    <mn>a3</mn>
+                  </mfrac>
+                </math>      
+                =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>54</mn>
+                    </mrow>
+                    <mn>18</mn>
+                  </mfrac>
+                </math><br>.<br>
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>an</mn>
+                    </mrow>
+                    <mn>an-1</mn>
+                  </mfrac>
+                </math>      
+                = 3                                                                     
+              </p> 
+              <img class="center_img" src="../img/pg/1.png">                                                       
+              <p class="justify">
+                A sequência (128, 32, 8, 2,. . .) é uma progressão geométrica cuja razão vale
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>4</mn>
+                  </mfrac>
+                </math>. De fato,             
+              </p>
+              <p class="justify center">
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a2</mn>
+                    </mrow>
+                    <mn>a1</mn>
+                  </mfrac>
+                </math>      
+                =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>32</mn>
+                    </mrow>
+                    <mn>128</mn>
+                  </mfrac>
+                </math><br>   
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a3</mn>
+                    </mrow>
+                    <mn>a2</mn>
+                  </mfrac>
+                </math>      
+                =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>8</mn>
+                    </mrow>
+                    <mn>32</mn>
+                  </mfrac>
+                </math><br>     
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a4</mn>
+                    </mrow>
+                    <mn>a3</mn>
+                  </mfrac>
+                </math>      
+                =
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>2</mn>
+                    </mrow>
+                    <mn>8</mn>
+                  </mfrac>
+                </math><br>.<br>
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>an</mn>
+                    </mrow>
+                    <mn>an-1</mn>
+                  </mfrac>
+                </math>      
+                = 
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>1</mn>
+                    </mrow>
+                    <mn>4</mn>
+                  </mfrac>
+                </math>                                       
+              </p>               
+              <img class="center_img" src="../img/pg/2.png">
+              <p class="justify">
+                Em uma progressão geométrica (
+                <math>  
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>1</mn>
+                    </msub>
+                  </mrow>
+                </math>, 
+                <math>  
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>2</mn>
+                    </msub>
+                  </mrow>
+                </math>, 
+                <math>  
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>3</mn>
+                    </msub>
+                  </mrow>
+                </math>, . . .),     
+                  para avançar um termo
+                  basta multiplicar pela razão; para avançar dois termos, basta multiplicar
+                  duas vezes pela razão, e assim por diante.
+              </p>
+              <h3>Relação entre dois termos quaisquer de uma P.G</h3>
+              <p class="justify">
+                (
+                <math>  
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>1</mn>
+                    </msub>
+                  </mrow>
+                </math>, 
+                <math>  
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>2</mn>
+                    </msub>
+                  </mrow>
+                </math>, . . .,  
+                <math>  
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>m</mn>
+                    </msub>
+                  </mrow>
+                </math>, . . .
+                <math>  
+                  <mrow>
+                    <msub>
+                      <mi>a</mi>
+                      <mn>n</mn>
+                    </msub>
+                  </mrow>
+                </math>, . . .), uma progressão geométrica de razão q.
+                <br>Então
+  
+              </p> 
+              <p class="justify center">
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a2</mn>
+                    </mrow>
+                    <mn>a1</mn>
+                  </mfrac>
+                </math>      
+                =
+                q<br>   
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a3</mn>
+                    </mrow>
+                    <mn>a2</mn>
+                  </mfrac>
+                </math>      
+                =
+                q<br>     
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>a4</mn>
+                    </mrow>
+                    <mn>a3</mn>
+                  </mfrac>
+                </math>      
+                = q<br>.<br>
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>am</mn>
+                    </mrow>
+                    <mn>am-1</mn>
+                  </mfrac>
+                </math>      
+                = q <br>.<br>
+                <math>
+                  <mfrac>
+                    <mrow>
+                      <mn>an</mn>
+                    </mrow>
+                    <mn>an-1</mn>
+                  </mfrac>
+                </math> = q                                                  
+              </p>                                               
+              <p class="justify center">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                                  
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                                   
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                                  
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                            
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>
+              <p class="justify">
+                
+              </p>                                                                                                                                                                                                                                 
+            </article>
+          </div>
+        </li>
+    </nav>
+    <script type="text/javascript">
+      let progress = document.getElementById('progressbar');
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function() {
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+ </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+       window.addEventListener('scroll', function(){
+         var scroll = document.querySelector('.scrollTop');
+         scroll.classList.toggle("active" , window.scrollY > 200)
+       })
+       function scrollToTop(){
+         window.scrollTo({
+           top: 0,
+           behavior: 'smooth'
+         })
+       }
+    </script>
+<script>window.MathJax = { MathML: { extensions: ["mml3.js", "content-mathml.js"]}};</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>    
+</body>
+</html>
