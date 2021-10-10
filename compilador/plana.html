@@ -21,6 +21,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="../ico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 <style>
 * {
   margin: 0;
@@ -187,91 +188,7 @@
    transform-origin: center bottom;
    transform: rotateX(-90deg) transLateY(100%); 
  }
- .menu {
-  width: 100%;
-  height: 60px;
-  background: #222;
-  font-family: fantasy;
- }
- .menu ul {
-  list-style: none;
-  position: relative;
- }
- .menu ul li {
-  width: 230px;
-  float: left;
- }
- .menu a {
-  background-color: #222;
-  border-radius: 15px;
-  padding: 20px;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
- }
- .menu a:hover {
-  background-color: #32a041;
-  color: #555;
- }
- .menu ul ul {
-  position: absolute;
-  visibility: hidden;
- }
- .menu ul li:hover ul {
-  visibility: visible;
-  z-index: 4;
- }
- .menu ul ul li {
-  float: none;
-  /*border-bottom: solid 1px #ccc;*/
-  margin: 2px;
- }
- .menu ul ul li a {
-  background-color: #069; 
- }
- label[for="bt_menu"] {
-  padding: 5px;
-  background-color: #222;
-  color: #fff;
-  font-family: "fantasy";
-  text-align: center;
-  font-size: 30px;
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  display: none;
- }
- #bt_menu {
-   display: none;
- }
-   @media (max-width: 800px) {
-     label[for="bt_menu"] {
-     display: block;
-  }
-  #bt_menu:checked ~ .menu {
-   margin-left: 0;
-  }
-.menu {
-   margin-top: 5px;
-   margin-left: -100%;
-   transition: all .4s;
-   text-decoration:none;
-}
-.menu ul li {
-   width: 100%;
-   float: none;
-}
-.menu ul ul {
-   position: static;
-   overflow: hidden;
-   max-height: 0;
-   transition: all .8s;
-}
-.menu ul li:hover ul {
-   height: auto;
-   max-height: 200px;
-}
+
 }
 </style>
 </head>
@@ -285,8 +202,7 @@
     <ul>
       <li><a href="../Texto/geometria_analitica.html">Analítica</a></li>
       <li><a href="../Texto/geometria_plana.html">Plana</a></li>
-      <li><a href="../Texto/gs.html">Espacial</a></li>
-      <li><a href="../Texto/Prog.html">PA e PG</a></li>
+      <li><a href="../Texto/pa.html">PA e PG</a></li>
     </ul>
     </li>
      <li><a href="#">Calculadora</a>
@@ -316,7 +232,7 @@
         <br><br>
         <nav class="link">
        <ul>
-         <center><h1><li><a href="#">Calculadora: Geometria Plana</a></li></h1></center>
+         <center><h1 style="z-index: 1"><li><a href="#">Calculadora: Geometria Plana</a></li></h1></center>
        </ul>
      </nav>
         <div class="btns">
