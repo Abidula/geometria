@@ -20,276 +20,11 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="../ico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
- <title>Geometria Plana</title>
-<style>
- * {
-  margin: 0;
-  padding: 0;
- }
- .link {
-  width: 100%;
-  height: 5px;
-  font-family: cursive;
- }
- .link ul {
-  list-style: none;
-  position: relative;
- }
- .link a {
-  background-color: #107E71;
-  border-radius: 10px;
-  padding: 3px;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
- }
-.nav_tabs{
-    width: 1000px;
-    height: 1000px;
-    margin: 75px auto;
-    background-color: #fff;
-    position: relative;
-    border-radius: 30px;
-  }
-  .nav_tabs ul{
-    list-style: none;
-  }
-  .nav_tabs ul li{
-    float: left;
-  }
-  .tab_label{
-    display: block;
-    width: 200px;
-    background-color: #222;
-    padding: 25px;
-    font-size: 15px;
-    color:#fff;
-    cursor: pointer;
-    text-align: center;
-    font-family: fantasy;
-  }
-  .nav_tabs .rd_tab { 
-  display:none;
-  position: relative;
-}
-.nav_tabs .rd_tab:checked ~ label { 
-  color:#fff;}
-.tab-content{
-  border-top: solid 5px #32a041;
-  background-color: #fff;
-  display: none;
-  position: absolute;
-  height: auto;
-  width: 1000px;
-  left: 0; 
-  border-radius:0;
-}
-.rd_tab:checked ~ .tab-content{
-  display: block;
-}
-.tab-content h2{
-  padding: 10px;
-  color: #0E1810;
-  font-family: Cursive;
-}
-.tab-content article{
-  padding: 30px;
-  color: #0E1810;
-  font-family: Cursive;
-}
- .menu {
-  width: 100%;
-  height: 60px;
-  background: #222;
-  font-family: fantasy;
- }
- .menu ul {
-  list-style: none;
-  position: relative;
- }
- .menu ul li {
-  width: 230px;
-  float: left;
- }
- .menu a {
-  background-color: #222;
-  border-radius: 15px;
-  padding: 20px;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
- }
- .menu a:hover {
-  background-color: #32a041;
-  color: #555;
- }
- .menu ul ul {
-  position: absolute;
-  visibility: hidden;
- }
- .menu ul li:hover ul {
-  visibility: visible;
-  z-index: 4;
- }
- .menu ul ul li {
-  float: none;
-  /*border-bottom: solid 1px #ccc;*/
-  margin: 2px;
- }
- .menu ul ul li a {
-  background-color: #069; 
- }
- label[for="bt_menu"] {
-  padding: 5px;
-  background-color: #222;
-  color: #fff;
-  font-family: "fantasy";
-  text-align: center;
-  font-size: 30px;
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  display: none;
- }
- label[for="tab1"]{
-  border-top-left-radius: 20px;
- }
-  label[for="tab4"]{
-  border-top-right-radius: 20px;
- }
- #bt_menu {
-      display: none;
- }
-    @media (max-width: 800px) {
-     label[for="bt_menu"] {
-     display: block;
-  }
-  #bt_menu:checked ~ .menu {
-      margin-left: 0;
-  }
-  .menu {
-      margin-top: 5px;
-      margin-left: -100%;
-      transition: all .4s;
-      text-decoration:none;
-  }
-  .menu ul li {
-      width: 100%;
-      float: none;
-  }
-  .menu ul ul {
-      position: static;
-      overflow: hidden;
-      max-height: 0;
-      transition: all .8s;
-  }
-  .menu ul li:hover ul {
-      height: auto;
-      max-height: 200px;
-  }
- }
- .zoom{
-  overflow: hidden;
-}
-.zoom img{
-  max-width: 100%;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.zoom:hover img{
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-/*#scroolPath{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.05);
-}*/
-#progressbar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 5px;
-  background: #120a8f;
-  /*animation: animate 5s linear infinite;*/
-}
-/*@keyframes animate{
-  0%, 100%{
-    filter: hue-rotate(0deg);
-  }
-  50%{
-    filter: hue-rotate(360deg);
-  }
-}
-#progressbar:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #008aff, #00ffe7);
-  filter: blur(10px);
-}
-#progressbar:after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #008aff, #00ffe7);
-  filter: blur(10px);
-}*/
-.scrollTop{
-  position: fixed;
-  bottom: 800px;
-  right: 40px;
-  width: 60px;
-  height: 60px;
-  background: #32a041/*091921*/ url(up.png);
-  border-radius: 50%;
-  background-size: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 100000;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-.scrollTop.active{
-  bottom: 40px;
-  visibility: visible;
-  opacity: 1;
-}
-ul.listagem{
-  list-style-type: disc;
-}
-p.justify{
-  font-size: 16px;
-  margin-bottom: 25px;
-  line-height: 30px;
-}
-p.center{
-  text-align: center;
-}
-img.center_img{
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-</style>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compartible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/bootstrap.css" rel="stylesheet">
+    <title>Geometria Plana</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compartible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body background="../img/fundo2.jpg">
  <input type="checkbox" id="bt_menu">
@@ -304,8 +39,7 @@ img.center_img{
    <ul>
       <li><a href="geometria_analitica.html">Analítica</a></li>
       <li><a href="geometria_plana.html">Plana</a></li>
-      <li><a href="pa.html">Progressão Aritmética</a></li>
-      <li><a href="pg.html">Progressão Geometrica</a></li>
+      <li><a href="pa.html">PA e PG</a></li>
    </ul>
    </li>
     <li><a href="#">Calculadora</a>
@@ -982,7 +716,6 @@ img.center_img{
               Para expressarmos a área de ABC de outra maneira útil, comece observando que ABO
                b = 30°. Então,
             </p>                
-
             <p class="justify center">
 
               <math style="font-family: serif;">
@@ -997,13 +730,13 @@ img.center_img{
                           </msub>
                           </mn>
                         </mrow>
-                        l
+                       <mn>l</mn>
                       </mfrac>
                     </math>
                   </mrow>
                   <mn>2</mn>
                 </mfrac>
-              </math>              
+              </math>
               ⇒ 
               <math>
                 <mfrac>
@@ -1013,9 +746,9 @@ img.center_img{
                     </msqrt>
                     </mn>
                   </mrow>
-                  3
+                  <mn>3</mn>
                 </mfrac>
-              </math>  
+              </math> 
               = 
               <math>
                 <mfrac>
@@ -1026,10 +759,10 @@ img.center_img{
                     </msub>
                     </mn>
                   </mrow>
-                  l
+                  <mn>l</mn>
                 </mfrac>
-              </math>       
-              ⇒       
+              </math> 
+              ⇒
               <math>
                 <mrow>
                   <msub>
@@ -1038,7 +771,7 @@ img.center_img{
                   </msub>
                   </mn>
                 </mrow>
-              </math>   
+              </math>  
               =
               <math>
                 <mfrac>
@@ -1048,9 +781,9 @@ img.center_img{
                     </msqrt>
                     </mn>
                   </mrow>
-                  6.
+                  <mn>6</mn>
                 </mfrac>
-              </math>                                 
+              </math>
             </p>
             <p class="justify">
               Continuando, analisemos o caso de um hexágono regular inscrito num
@@ -1062,13 +795,13 @@ img.center_img{
               os quais todos têm áreas iguais a
               <math>
                 <mfrac>
-                  <mrow>l²
+                  <mrow><mn>l²</mn>
                     <msqrt>
                       <mn>3</mn>
                     </msqrt>
                     </mn>
                   </mrow>
-                  4
+                  <mn>4</mn>
                 </mfrac>
               </math>
               Portanto, a área do hexágono ABCDEF é dada por
@@ -1077,28 +810,28 @@ img.center_img{
               A(ABCDEF) = 6 x
               <math>
                 <mfrac>
-                  <mrow>l²
+                  <mrow><mn>l²</mn>
                     <msqrt>
                       <mn>3</mn>
                     </msqrt>
                     </mn>
                   </mrow>
-                  4
+                  <mn>4</mn>
                 </mfrac>
               </math>
               =
               <math>
                 <mfrac>
-                  <mrow>3
+                  <mrow><mn>3</mn>
                     <msqrt>
                       <mn>3</mn>
                     </msqrt>
                     </mn>
                   </mrow>
-                  2
+                  <mn>2</mn>
                 </mfrac>
               </math>                            
-              l².
+              <mn>l²</mn>.
             </p>
             <p class="justify">
               De outro modo, observe que cada um dos seis triângulos equiláteros
@@ -1111,28 +844,28 @@ img.center_img{
               <math>
                 <mfrac>
                   <mrow>
-                    <mn>l x &nbsp
+                    <mn><mn>l x &nbsp</mn>
                       <msub>
                         <mi>a</mi>
                         <mn>6</mn>
                       </msub>
                     </mn>
                   </mrow>
-                  2
+                  <mn>2</mn>
                 </mfrac>
               </math>   
               =
               <math>
                 <mfrac>
                   <mrow>
-                    <mn>6l x &nbsp
+                    <mn>6l x &nbsp</mn>
                       <msub>
                         <mi>a</mi>
                         <mn>6</mn>
                       </msub>
                     </mn>
                   </mrow>
-                  2
+                  <mn>2</mn>
                 </mfrac>
               </math>                 
               <math>
